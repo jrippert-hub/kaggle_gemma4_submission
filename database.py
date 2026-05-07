@@ -1,4 +1,5 @@
 import json
+from typing import Optional
 
 import aiosqlite
 
@@ -20,7 +21,7 @@ async def init_db() -> None:
         await db.commit()
 
 
-async def get_session(session_id: str) -> dict | None:
+async def get_session(session_id: str) -> Optional[dict]:
     async with aiosqlite.connect(DB_PATH) as db:
         db.row_factory = aiosqlite.Row
         async with db.execute(
