@@ -2,6 +2,7 @@ import asyncio
 import logging
 import os
 from contextlib import asynccontextmanager
+from typing import List, Optional
 
 import httpx
 import numpy as np
@@ -41,7 +42,7 @@ async def _ollama_chat(messages: list[dict]) -> str:
         return resp.json()["message"]["content"]
 
 
-async def _get_embedding(text: str) -> list[float]:
+async def _get_embedding(text: str) -> List[float]:
     async with httpx.AsyncClient(timeout=30.0) as client:
         resp = await client.post(
             f"{OLLAMA_BASE_URL}/api/embeddings",
@@ -55,7 +56,7 @@ async def _get_embedding(text: str) -> list[float]:
 # Trigger evaluation
 # ---------------------------------------------------------------------------
 
-def _cosine_similarity(a: list[float], b: list[float]) -> float:
+def _cosine_similarity(a: List[float], b: List[float]) -> float:
     va, vb = np.array(a, dtype=np.float32), np.array(b, dtype=np.float32)
     denom = float(np.linalg.norm(va) * np.linalg.norm(vb))
     if denom == 0.0:
@@ -66,7 +67,7 @@ def _cosine_similarity(a: list[float], b: list[float]) -> float:
 async def evaluate_triggers(
     session_id: str,
     turn_count: int,
-    message_embedding: list[float],
+    message_embedding: List[float],
 ) -> bool:
     session = await get_session(session_id)
     if session is None:
@@ -180,7 +181,7 @@ class SessionState(BaseModel):
 async def _post_chat_tasks(
     session_id: str,
     turn_count: int,
-    message_embedding: list[float],
+    message_embedding: List[float],
 ) -> None:
     triggered = await evaluate_triggers(session_id, turn_count, message_embedding)
     if triggered:
