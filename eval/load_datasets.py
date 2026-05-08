@@ -23,6 +23,8 @@ from urllib.parse import quote
 
 import requests
 
+HEADERS = {"User-Agent": "CasparEval/1.0 (Kaggle competition research bot) python-requests"}
+
 EVAL_DIR = Path(__file__).parent
 MT_ESC_DIR = EVAL_DIR / "data" / "multi_turn" / "escalating"
 MT_BEN_DIR = EVAL_DIR / "data" / "multi_turn" / "benign"
@@ -60,7 +62,7 @@ def _hf_fetch(dataset: str, split: str = "train", offset: int = 0, length: int =
         f"&split={split}&offset={offset}&length={length}"
     )
     try:
-        resp = requests.get(url, timeout=30)
+        resp = requests.get(url, timeout=30, headers=HEADERS)
         resp.raise_for_status()
         return [row["row"] for row in resp.json().get("rows", [])]
     except Exception as exc:
@@ -100,7 +102,7 @@ def _wiki_article(title: str) -> str:
             "format": "json",
             "redirects": True,
         }
-        resp = requests.get("https://en.wikipedia.org/w/api.php", params=params, timeout=20)
+        resp = requests.get("https://en.wikipedia.org/w/api.php", params=params, timeout=20, headers=HEADERS)
         resp.raise_for_status()
         pages = resp.json()["query"]["pages"]
         text = next(iter(pages.values())).get("extract", "")
@@ -115,36 +117,28 @@ def _wiki_article(title: str) -> str:
 # ---------------------------------------------------------------------------
 
 def load_mt_benign(n: int) -> List[Dict]:
-    print("  Fetching facebook/empathetic_dialogues via HF API…")
-    rows = _hf_fetch_all("facebook/empathetic_dialogues", max_rows=min(n * 30, 3000))
+    """daily_dialog: multi-turn everyday conversations, confirmed on HF server."""
+    print("  Fetching li2017dailydialog/daily_dialog via HF API…")
+    rows = _hf_fetch_all("li2017dailydialog/daily_dialog", max_rows=min(n * 3, 300))
     if not rows:
         print("  WARNING: no rows returned, using fallback")
         return _fallback_benign(n)
 
-    # Group by conv_id
-    convs: Dict[str, list] = {}
-    for row in rows:
-        cid = row.get("conv_id", "")
-        convs.setdefault(cid, []).append(row)
-
-    conv_list = list(convs.values())
-    random.shuffle(conv_list)
-
+    random.shuffle(rows)
     results = []
-    for conv in conv_list:
-        sorted_turns = sorted(conv, key=lambda r: r.get("utterance_idx", 0))
+    for row in rows:
+        raw_turns = row.get("dialog", [])
+        if not raw_turns or len(raw_turns) < 4:
+            continue
         turns = []
-        for row in sorted_turns:
-            role = "user" if row.get("speaker_idx", 0) == 0 else "assistant"
-            content = row.get("utterance", "").strip()
-            if content:
-                turns.append({"role": role, "content": content})
-        if len(turns) >= 4:
-            results.append({"turns": turns, "domain": sorted_turns[0].get("emotion", "general")})
+        for i, utterance in enumerate(raw_turns):
+            role = "user" if i % 2 == 0 else "assistant"
+            turns.append({"role": role, "content": utterance.strip()})
+        results.append({"turns": turns, "domain": "daily_conversation"})
         if len(results) >= n:
             break
 
-    return results[:n]
+    return results[:n] or _fallback_benign(n)
 
 
 def _fallback_benign(n: int) -> List[Dict]:
