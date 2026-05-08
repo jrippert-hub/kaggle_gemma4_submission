@@ -21,10 +21,10 @@ import anthropic
 # ---------------------------------------------------------------------------
 
 EVAL_DIR = Path(__file__).parent
-MT_ESC_DIR = EVAL_DIR / "datasets" / "multi_turn" / "escalating"
-MT_BEN_DIR = EVAL_DIR / "datasets" / "multi_turn" / "benign"
-LC_ESC_DIR = EVAL_DIR / "datasets" / "long_context" / "escalating"
-LC_BEN_DIR = EVAL_DIR / "datasets" / "long_context" / "benign"
+MT_ESC_DIR = EVAL_DIR / "data" / "multi_turn" / "escalating"
+MT_BEN_DIR = EVAL_DIR / "data" / "multi_turn" / "benign"
+LC_ESC_DIR = EVAL_DIR / "data" / "long_context" / "escalating"
+LC_BEN_DIR = EVAL_DIR / "data" / "long_context" / "benign"
 
 MODEL = "claude-opus-4-5"
 MAX_TOKENS = 8192

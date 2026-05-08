@@ -2,9 +2,9 @@
 run_eval.py — Replay datasets against Caspar and (optionally) baselines.
 
 Usage:
-    python run_eval.py --dataset datasets/multi_turn/escalating
-    python run_eval.py --dataset datasets/multi_turn/escalating --baseline
-    python run_eval.py --dataset datasets/long_context/escalating --baseline --max 10
+    python run_eval.py --dataset data/multi_turn/escalating
+    python run_eval.py --dataset data/multi_turn/escalating --baseline
+    python run_eval.py --dataset data/long_context/escalating --baseline --max 10
 """
 
 import argparse

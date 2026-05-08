@@ -59,10 +59,10 @@ echo "════════════════════════�
 cd "$EVAL_DIR"
 
 DATASETS=(
-    "datasets/multi_turn/escalating"
-    "datasets/multi_turn/benign"
-    "datasets/long_context/escalating"
-    "datasets/long_context/benign"
+    "data/multi_turn/escalating"
+    "data/multi_turn/benign"
+    "data/long_context/escalating"
+    "data/long_context/benign"
 )
 
 for DS in "${DATASETS[@]}"; do
