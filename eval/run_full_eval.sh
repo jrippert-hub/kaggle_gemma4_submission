@@ -21,10 +21,10 @@ trap cleanup EXIT
 # ── Step 1: Generate datasets ──────────────────────────────────────────────
 echo ""
 echo "══════════════════════════════════════════"
-echo "  Step 1 — Generate datasets (n=$N each)"
+echo "  Step 1 — Load datasets (n=$N each)"
 echo "══════════════════════════════════════════"
 cd "$EVAL_DIR"
-python generate_dataset.py --n "$N"
+python load_datasets.py --n "$N"
 
 # ── Step 2: Start Caspar in background ────────────────────────────────────
 echo ""
