@@ -54,8 +54,9 @@ BENIGN_WIKI_TOPICS = [
 # ---------------------------------------------------------------------------
 
 def _hf_fetch(dataset: str, split: str = "train", offset: int = 0, length: int = 100) -> List[dict]:
+    # safe='' ensures the slash in "org/dataset" is percent-encoded to %2F
     url = (
-        f"{HF_API}?dataset={quote(dataset)}&config=default"
+        f"{HF_API}?dataset={quote(dataset, safe='')}&config=default"
         f"&split={split}&offset={offset}&length={length}"
     )
     try:
@@ -88,18 +89,24 @@ def _hf_fetch_all(dataset: str, split: str = "train", max_rows: int = 500) -> Li
 # ---------------------------------------------------------------------------
 
 def _wiki_article(title: str) -> str:
-    """Fetch full article text via Wikipedia API."""
+    """Fetch full article plain text via Wikipedia API."""
     try:
-        url = f"https://en.wikipedia.org/w/api.php"
         params = {
-            "action": "query", "titles": title, "prop": "extracts",
-            "explaintext": True, "format": "json",
+            "action": "query",
+            "titles": title,
+            "prop": "extracts",
+            "explaintext": True,
+            "exlimit": 1,
+            "format": "json",
+            "redirects": True,
         }
-        resp = requests.get(url, params=params, timeout=20)
+        resp = requests.get("https://en.wikipedia.org/w/api.php", params=params, timeout=20)
+        resp.raise_for_status()
         pages = resp.json()["query"]["pages"]
         text = next(iter(pages.values())).get("extract", "")
         return text
-    except Exception:
+    except Exception as exc:
+        print(f"  Wikipedia fetch failed ({title}): {exc}")
         return ""
 
 
