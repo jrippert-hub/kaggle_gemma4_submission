@@ -215,6 +215,17 @@ async def health() -> dict:
     return {"status": "ok", "model": OLLAMA_CHAT_MODEL, "test_mode": _TEST_MODE}
 
 
+@app.post("/admin/force-evaluate/{session_id}")
+async def force_evaluate(session_id: str) -> dict:
+    """
+    Directly invoke the shadow agent, bypassing trigger thresholds.
+    Used by the eval harness for long-context documents where a single
+    message would not normally cross the trigger threshold.
+    """
+    await run_shadow_agent(session_id, OLLAMA_BASE_URL, OLLAMA_CHAT_MODEL)
+    return await get_safety_state(session_id)
+
+
 @app.get("/", response_class=HTMLResponse)
 async def chat_ui() -> str:
     return """<!DOCTYPE html>
