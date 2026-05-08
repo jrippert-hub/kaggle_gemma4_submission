@@ -18,6 +18,8 @@ from typing import Optional
 
 import httpx
 
+from token_utils import count_tokens, count_turns_tokens
+
 CASPAR_URL = "http://localhost:8000"
 RESULTS_DIR = Path(__file__).parent / "results"
 RISK_SCORE_THRESHOLD = 0.5
@@ -97,6 +99,8 @@ async def eval_caspar_multiturn(conversation: dict) -> dict:
         await asyncio.sleep(POLL_DELAY)
         final_risk = await _poll_risk(client, session_id) or {}
 
+    total_tokens = count_turns_tokens(turns)
+
     return {
         "session_id": session_id,
         "first_flag_turn": first_flag_turn,
@@ -104,6 +108,8 @@ async def eval_caspar_multiturn(conversation: dict) -> dict:
         "final_trajectory": final_risk.get("trajectory", "stable"),
         "activations": activations,
         "risk_scores": risk_scores,
+        "total_context_tokens": total_tokens,
+        "baseline_sees_tokens": 512,   # what a truncating classifier sees
     }
 
 
@@ -134,6 +140,7 @@ async def eval_caspar_longcontext(document: dict) -> dict:
 
     score = float(risk.get("risk_score", 0.0))
     flagged = score > RISK_SCORE_THRESHOLD
+    total_tokens = count_tokens(text)
 
     return {
         "session_id": session_id,
@@ -142,6 +149,8 @@ async def eval_caspar_longcontext(document: dict) -> dict:
         "final_trajectory": risk.get("trajectory", "stable"),
         "activations": 1 if flagged else 0,
         "risk_scores": [{"turn": 1, "score": score}],
+        "total_context_tokens": total_tokens,
+        "baseline_sees_tokens": 512,
     }
 
 
