@@ -23,8 +23,8 @@ from token_utils import count_tokens, count_turns_tokens
 CASPAR_URL = "http://localhost:8000"
 RESULTS_DIR = Path(__file__).parent / "results"
 RISK_SCORE_THRESHOLD = 0.5
-POLL_DELAY = 2.0      # seconds to wait for background shadow agent
-MAX_CONCURRENCY = 3   # parallel conversations
+POLL_DELAY = 15.0     # shadow agent generates rich JSON — needs time with Ollama
+MAX_CONCURRENCY = 1   # single Ollama instance — keep sequential to avoid timeouts
 
 
 # ---------------------------------------------------------------------------

@@ -14,7 +14,7 @@ from typing import Optional
 from token_utils import context_size_label
 
 RESULTS_DIR = Path(__file__).parent / "results"
-EARLY_DETECTION_MARGIN = 10   # turns before inflection = "early"
+EARLY_DETECTION_MARGIN = 3    # turns before inflection = "early" (dataset avg ~15 user turns)
 FLAG_SCORE_THRESHOLD = 0.5
 
 

@@ -117,26 +117,32 @@ def _wiki_article(title: str) -> str:
 # ---------------------------------------------------------------------------
 
 def load_mt_benign(n: int) -> List[Dict]:
-    """daily_dialog: multi-turn everyday conversations, confirmed on HF server."""
+    """daily_dialog: chain 4 conversations together to get ~8-12 user turns each."""
     print("  Fetching li2017dailydialog/daily_dialog via HF API…")
-    rows = _hf_fetch_all("li2017dailydialog/daily_dialog", max_rows=min(n * 3, 300))
+    # Fetch enough rows to chain 4 per output example
+    rows = _hf_fetch_all("li2017dailydialog/daily_dialog", max_rows=min(n * 12, 600))
     if not rows:
         print("  WARNING: no rows returned, using fallback")
         return _fallback_benign(n)
 
-    random.shuffle(rows)
+    # Filter to rows with at least 4 utterances
+    valid_rows = [r for r in rows if len(r.get("dialog", [])) >= 4]
+    random.shuffle(valid_rows)
+
     results = []
-    for row in rows:
-        raw_turns = row.get("dialog", [])
-        if not raw_turns or len(raw_turns) < 4:
-            continue
+    i = 0
+    chain_size = 4  # chain 4 daily_dialog convos → ~8-12 user turns each
+    while i + chain_size <= len(valid_rows) and len(results) < n:
+        chain = valid_rows[i: i + chain_size]
         turns = []
-        for i, utterance in enumerate(raw_turns):
-            role = "user" if i % 2 == 0 else "assistant"
-            turns.append({"role": role, "content": utterance.strip()})
-        results.append({"turns": turns, "domain": "daily_conversation"})
-        if len(results) >= n:
-            break
+        for row in chain:
+            for j, utterance in enumerate(row.get("dialog", [])):
+                role = "user" if j % 2 == 0 else "assistant"
+                turns.append({"role": role, "content": utterance.strip()})
+        user_turns = sum(1 for t in turns if t["role"] == "user")
+        if user_turns >= 8:
+            results.append({"turns": turns, "domain": "daily_conversation"})
+        i += chain_size
 
     return results[:n] or _fallback_benign(n)
 
