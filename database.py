@@ -32,15 +32,23 @@ CREATE TABLE IF NOT EXISTS safety_state (
 
 EMPTY_SAFETY_STATE = {
     "turn_count": 0,
-    "baseline": "",
-    "observed_themes": [],
+    "baseline": {
+        "summary": "",
+        "tone": "",
+        "topics": [],
+    },
+    "observed_themes": [],        # [{theme, first_seen_turn, evidence}]
     "trajectory": "stable",
     "risk_score": 0.0,
     "trend_direction": "stable",
     "confidence": 0.0,
-    "anchor_turns": [],
+    "confidence_rationale": "",
+    "anchor_turns": [],           # [{turn, quote, reason}]
+    "arc_summary": "",
     "last_reasoning": "",
+    "activation_history": [],     # [{activation, turn_count, trajectory, risk_score, action, timestamp}]
     "recommended_action": "none",
+    "action_rationale": "",
 }
 
 
@@ -113,14 +121,22 @@ async def get_user_turn_count(session_id: str) -> int:
 # anchor_turns
 # ---------------------------------------------------------------------------
 
-async def save_anchor_turns(session_id: str, turn_numbers: List[int], all_turns: List[dict]) -> None:
+async def save_anchor_turns(session_id: str, anchor_turns: list, all_turns: List[dict]) -> None:
+    """Accept either List[int] or List[dict] with {turn, quote, reason}."""
     turn_map = {t["turn_number"]: t["content"] for t in all_turns}
     async with aiosqlite.connect(DB_PATH) as db:
-        for tn in turn_numbers:
-            await db.execute(
-                "INSERT OR IGNORE INTO anchor_turns (session_id, turn_number, content) VALUES (?,?,?)",
-                (session_id, tn, turn_map.get(tn, "")),
-            )
+        for anchor in anchor_turns:
+            if isinstance(anchor, dict):
+                tn = anchor.get("turn")
+                content = anchor.get("quote") or turn_map.get(tn, "")
+            else:
+                tn = int(anchor)
+                content = turn_map.get(tn, "")
+            if tn is not None:
+                await db.execute(
+                    "INSERT OR IGNORE INTO anchor_turns (session_id, turn_number, content) VALUES (?,?,?)",
+                    (session_id, tn, content),
+                )
         await db.commit()
 
 
