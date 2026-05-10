@@ -99,7 +99,9 @@ async def eval_caspar_multiturn(conversation: dict) -> dict:
         await asyncio.sleep(POLL_DELAY)
         final_risk = await _poll_risk(client, session_id) or {}
 
+    user_turns = [t for t in turns if t["role"] == "user"]
     total_tokens = count_turns_tokens(turns)
+    user_token_counts = [count_tokens(t["content"]) for t in user_turns]
 
     return {
         "session_id": session_id,
@@ -108,8 +110,14 @@ async def eval_caspar_multiturn(conversation: dict) -> dict:
         "final_trajectory": final_risk.get("trajectory", "stable"),
         "activations": activations,
         "risk_scores": risk_scores,
+        # --- conversation shape ---
+        "n_total_turns": len(turns),
+        "n_user_turns": len(user_turns),
         "total_context_tokens": total_tokens,
-        "baseline_sees_tokens": 512,   # what a truncating classifier sees
+        "avg_tokens_per_user_turn": int(sum(user_token_counts) / len(user_token_counts)) if user_token_counts else 0,
+        "min_tokens_per_user_turn": min(user_token_counts) if user_token_counts else 0,
+        "max_tokens_per_user_turn": max(user_token_counts) if user_token_counts else 0,
+        "baseline_sees_tokens": 512,
     }
 
 
@@ -141,6 +149,7 @@ async def eval_caspar_longcontext(document: dict) -> dict:
     score = float(risk.get("risk_score", 0.0))
     flagged = score > RISK_SCORE_THRESHOLD
     total_tokens = count_tokens(text)
+    word_count = len(text.split())
 
     return {
         "session_id": session_id,
@@ -149,8 +158,11 @@ async def eval_caspar_longcontext(document: dict) -> dict:
         "final_trajectory": risk.get("trajectory", "stable"),
         "activations": 1 if flagged else 0,
         "risk_scores": [{"turn": 1, "score": score}],
+        # --- document shape ---
         "total_context_tokens": total_tokens,
+        "word_count": word_count,
         "baseline_sees_tokens": 512,
+        "context_ratio": round(total_tokens / 512, 1),   # how many times more Caspar reads vs truncating baseline
     }
 
 
@@ -162,6 +174,7 @@ def eval_baseline_multiturn(conversation: dict, classifier) -> dict:
     turns = conversation.get("turns", [])
     first_flag = classifier.first_flag_turn(turns)
     user_turns = [t for t in turns if t["role"] == "user"]
+    user_token_counts = [count_tokens(t["content"]) for t in user_turns]
     scores = []
     user_turn_count = 0
     for t in turns:
@@ -173,6 +186,11 @@ def eval_baseline_multiturn(conversation: dict, classifier) -> dict:
         "first_flag_turn": first_flag,
         "final_risk_score": scores[-1]["score"] if scores else 0.0,
         "risk_scores": scores,
+        "n_total_turns": len(turns),
+        "n_user_turns": len(user_turns),
+        "total_context_tokens": count_turns_tokens(turns),
+        "avg_tokens_per_user_turn": int(sum(user_token_counts) / len(user_token_counts)) if user_token_counts else 0,
+        "baseline_sees_tokens": 512,
     }
 
 
@@ -180,10 +198,15 @@ def eval_baseline_longcontext(document: dict, classifier) -> dict:
     text = document.get("text", "")
     flagged = classifier.flag_document(text)
     score = classifier.score_document(text)
+    total_tokens = count_tokens(text)
     return {
         "first_flag_turn": 1 if flagged else None,
         "final_risk_score": score,
         "risk_scores": [{"turn": 1, "score": score}],
+        "total_context_tokens": total_tokens,
+        "word_count": len(text.split()),
+        "baseline_sees_tokens": 512,
+        "context_ratio": round(total_tokens / 512, 1),
     }
 
 
