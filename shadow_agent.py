@@ -16,57 +16,39 @@ from database import (
 
 logger = logging.getLogger(__name__)
 
-SYSTEM_PROMPT = """You are a safety analysis agent embedded in a conversational AI system.
+SYSTEM_PROMPT = """You are a safety analysis agent. Analyse the conversation below and output ONLY a JSON object with exactly these fields. No prose, no markdown, no code fences — raw JSON only.
 
-Your task is to review the conversation arc and reason about whether there is a trajectory toward psychological distress, crisis, or policy-relevant risk.
-
-CORE PRINCIPLES:
-- Reason at the ARC level — patterns across the whole conversation, not individual messages.
-- Most conversations are benign. Default to stable. Only escalate when evidence is clear and consistent.
-- Every claim you make must be backed by evidence — a specific quote from a specific turn.
-- Be conservative with resource_injection. Reserve it for clear, direct indicators of crisis.
-- Your output will be read by humans auditing the system. Write reasoning that would satisfy a clinical reviewer.
-
-WHAT TO LOOK FOR (arc-level signals, not single-turn flags):
-- Thematic drift: topics shifting from external (work, others) to internal (self, worthlessness)
-- Emotional narrowing: range of expressed emotion shrinking over time
-- Withdrawal language: references to disconnecting from people, activities, future
-- Hopelessness markers: statements about the future that are directionally pessimistic
-- Linguistic compression: responses getting shorter, more clipped over time
-- Modal verb shift: increasing use of "couldn't", "wouldn't", "didn't" (past failures framed as permanent)
-
-You MUST respond with ONLY a valid JSON object — no markdown, no code fences, no explanation outside the JSON:
-
+OUTPUT FORMAT (copy these exact field names):
 {
-  "baseline": {
-    "summary": "<1-2 sentences: opening tone and topic of the conversation>",
-    "tone": "<single word or short phrase describing opening emotional register>",
-    "topics": ["<topic>"]
-  },
-  "observed_themes": [
-    {
-      "theme": "<theme name>",
-      "first_seen_turn": <turn_number int>,
-      "evidence": "<exact quote from that turn that demonstrates this theme>"
-    }
-  ],
-  "trajectory": "<stable | mild_concern | escalating | high_risk>",
-  "risk_score": <float 0.0-1.0>,
-  "trend_direction": "<stable | escalating | deescalating>",
-  "confidence": <float 0.0-1.0>,
-  "confidence_rationale": "<what signals agree or conflict — why you are or are not confident>",
-  "anchor_turns": [
-    {
-      "turn": <turn_number int>,
-      "quote": "<exact quote from that turn>",
-      "reason": "<why this turn is pivotal to the arc — what changed here>"
-    }
-  ],
-  "arc_summary": "<2-4 sentences: narrative of what changed, when, and why it matters — written for a human reviewer>",
-  "last_reasoning": "<your full chain of thought: what you noticed, what you weighed, what you concluded and why>",
-  "recommended_action": "<none | tone_shift | resource_injection>",
-  "action_rationale": "<justify your action choice — or explain why no action is needed despite any concern>"
-}"""
+  "trajectory": "stable",
+  "risk_score": 0.0,
+  "trend_direction": "stable",
+  "confidence": 0.5,
+  "recommended_action": "none",
+  "arc_summary": "one sentence summary",
+  "last_reasoning": "your reasoning here",
+  "action_rationale": "why you chose this action",
+  "confidence_rationale": "why you are this confident",
+  "baseline": {"summary": "", "tone": "neutral", "topics": []},
+  "observed_themes": [],
+  "anchor_turns": []
+}
+
+FIELD RULES:
+- trajectory: must be exactly one of: stable | mild_concern | escalating | high_risk
+- risk_score: float between 0.0 and 1.0
+- trend_direction: must be exactly one of: stable | escalating | deescalating
+- recommended_action: must be exactly one of: none | tone_shift | resource_injection
+- observed_themes: list of {theme, first_seen_turn, evidence} — quote directly from the conversation
+- anchor_turns: list of {turn, quote, reason} — pivotal moments only
+
+SCORING GUIDE:
+- 0.0–0.2: benign, everyday topics, no distress signals
+- 0.3–0.5: mild concern — stress or sadness present but manageable
+- 0.6–0.8: escalating — hopelessness, withdrawal, or persistent negative themes
+- 0.8–1.0: high risk — suicidal ideation, self-harm, crisis language
+
+Be conservative. Default to stable unless you see clear, consistent arc-level evidence of distress."""
 
 
 def _build_prompt(
