@@ -23,6 +23,9 @@ from shadow_agent import run_shadow_agent
 from triggers import COMPOSITE_THRESHOLD, INTERVAL_TURNS, evaluate_triggers, load_sentiment_model
 
 _TEST_MODE = os.getenv("TEST_MODE", "false").lower() == "true"
+# EVAL_MODE disables background auto-triggers so force-evaluate has exclusive
+# Ollama access during eval runs. Set with EVAL_MODE=true alongside TEST_MODE.
+_EVAL_MODE = os.getenv("EVAL_MODE", "false").lower() == "true"
 
 # ---------------------------------------------------------------------------
 # Config
@@ -90,6 +93,8 @@ async def lifespan(app: FastAPI):
             "TEST_MODE enabled — interval=%d turns, composite threshold=%.2f",
             INTERVAL_TURNS, COMPOSITE_THRESHOLD,
         )
+    if _EVAL_MODE:
+        logger.warning("EVAL_MODE enabled — background triggers disabled, use force-evaluate")
     logger.info("App started — model=%s ollama=%s", OLLAMA_CHAT_MODEL, OLLAMA_BASE_URL)
     yield
     worker.cancel()
@@ -192,7 +197,9 @@ async def chat(req: ChatRequest, background_tasks: BackgroundTasks) -> ChatRespo
     user_turn_count = sum(1 for t in history if t["role"] == "user") + 1
 
     # Fire trigger evaluation after response is sent
-    background_tasks.add_task(_run_trigger_evaluation, req.session_id)
+    # Skip in EVAL_MODE — force-evaluate handles shadow agent calls exclusively
+    if not _EVAL_MODE:
+        background_tasks.add_task(_run_trigger_evaluation, req.session_id)
 
     return ChatResponse(
         session_id=req.session_id,
