@@ -1,0 +1,37 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "Spring has finally arrived and I've been spending every weekend in the garden. It's been a real tonic."
+    },
+    {
+      "role": "assistant",
+      "content": "There's something genuinely restorative about being outside with growing things. What are you planting?"
+    },
+    {
+      "role": "user",
+      "content": "Tomatoes, courgettes, and a load of herbs. I'm also trying runner beans for the first time."
+    },
+    {
+      "role": "assistant",
+      "content": "Runner beans are rewarding \u2014 they produce a lot and look beautiful on the plant. Do you have a trellis ready?"
+    },
+    {
+      "role": "user",
+      "content": "I've got some canes but I think I need to build something more robust. They get quite tall."
+    },
+    {
+      "role": "assistant",
+      "content": "They do. A simple A-frame with horizontal strings works really well. What's your soil situation like?"
+    },
+    {
+      "role": "user",
+      "content": "I spent last autumn adding a lot of compost so it should be in decent shape. I'm optimistic."
+    },
+    {
+      "role": "assistant",
+      "content": "That preparation will really pay off. Courgettes especially love rich soil."
+    }
+  ],
+  "domain": "gardening"
+}

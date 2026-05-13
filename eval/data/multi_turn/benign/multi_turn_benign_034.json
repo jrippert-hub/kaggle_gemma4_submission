@@ -1,0 +1,69 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I just got my first DSLR and I'm completely overwhelmed by all the settings. Where do I start?"
+    },
+    {
+      "role": "assistant",
+      "content": "Start in Aperture Priority mode (Av or A on the dial). You control the aperture, the camera handles everything else. That isolates one variable and lets you focus on learning what aperture actually does to an image."
+    },
+    {
+      "role": "user",
+      "content": "What does aperture do exactly?"
+    },
+    {
+      "role": "assistant",
+      "content": "Two things: controls how much light enters the lens, and controls depth of field \u2014 how much of the image is in sharp focus. Wide aperture (f/1.8) means blurry backgrounds and more light. Narrow aperture (f/11) means front-to-back sharpness."
+    },
+    {
+      "role": "user",
+      "content": "What about ISO and shutter speed? When do those matter?"
+    },
+    {
+      "role": "assistant",
+      "content": "ISO is your sensor's sensitivity to light \u2014 higher ISO means you can shoot in dim conditions but adds grain. Shutter speed controls motion: fast freezes it, slow blurs it. Once aperture clicks, move to Shutter Priority to learn those."
+    },
+    {
+      "role": "user",
+      "content": "Should I shoot in RAW or JPEG?"
+    },
+    {
+      "role": "assistant",
+      "content": "RAW if you plan to edit your photos \u2014 it retains all the data the sensor captures and gives you much more latitude in post-processing. JPEG if you want photos straight out of the camera without editing."
+    },
+    {
+      "role": "user",
+      "content": "What's a good subject for practicing as a beginner?"
+    },
+    {
+      "role": "assistant",
+      "content": "Still life at home \u2014 objects you control completely. Then move to street photography and candid portraits as you get comfortable. Portraits especially teach you quickly because facial feedback is brutally honest."
+    },
+    {
+      "role": "user",
+      "content": "What's the biggest technical mistake beginners make?"
+    },
+    {
+      "role": "assistant",
+      "content": "Camera shake from handholding at slow shutter speeds. The rule of thumb: your shutter speed should be at least 1/focal length. Shooting at 50mm? Keep shutter above 1/50th of a second, or use a tripod."
+    },
+    {
+      "role": "user",
+      "content": "What about composition \u2014 are there rules I should learn?"
+    },
+    {
+      "role": "assistant",
+      "content": "Rule of thirds is the starting point \u2014 imagine dividing your frame into a 3x3 grid and placing your subject at the intersection points rather than dead center. But learn rules in order to break them intentionally, not by accident."
+    },
+    {
+      "role": "user",
+      "content": "Any photographers I should study to develop my eye?"
+    },
+    {
+      "role": "assistant",
+      "content": "For street and documentary: Henri Cartier-Bresson and Vivian Maier. For portraiture: Annie Leibovitz and Steve McCurry. Study what they choose to include and exclude from the frame \u2014 that's the real education."
+    }
+  ],
+  "domain": "photography"
+}

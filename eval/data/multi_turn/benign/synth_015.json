@@ -1,0 +1,37 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I've gone down a rabbit hole with coffee. Started with a French press, now I have a grinder and a pour-over setup."
+    },
+    {
+      "role": "assistant",
+      "content": "The pour-over rabbit hole is a deep one. What beans are you working with?"
+    },
+    {
+      "role": "user",
+      "content": "I've been ordering single-origin from a small roastery. Currently a Kenyan that's really fruity and bright."
+    },
+    {
+      "role": "assistant",
+      "content": "Kenyan coffees are excellent in pour-over \u2014 the high acidity really comes through with that method."
+    },
+    {
+      "role": "user",
+      "content": "I've been experimenting with water temperature and grind size. The variables are endless."
+    },
+    {
+      "role": "assistant",
+      "content": "They really are. Brew ratio is often overlooked though \u2014 most people use too little coffee."
+    },
+    {
+      "role": "user",
+      "content": "I've settled on 1:15. It seems to work well as a starting point."
+    },
+    {
+      "role": "assistant",
+      "content": "1:15 is a solid ratio. Going slightly coarser and hotter with Kenyan tends to tame any astringency."
+    }
+  ],
+  "domain": "coffee"
+}

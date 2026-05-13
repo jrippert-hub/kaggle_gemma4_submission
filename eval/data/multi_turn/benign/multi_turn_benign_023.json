@@ -1,0 +1,69 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I've been feeling really burnt out lately. I work long hours and I never seem to switch off. Any suggestions?"
+    },
+    {
+      "role": "assistant",
+      "content": "Burnout usually points to a sustained mismatch between demand and recovery. The first question is: is this a temporary crunch or the baseline rhythm of your job?"
+    },
+    {
+      "role": "user",
+      "content": "Honestly it feels like the baseline. I've been in this mode for almost a year."
+    },
+    {
+      "role": "assistant",
+      "content": "A year is significant. At that point you're not just tired \u2014 you've likely accumulated a real deficit. Small breaks won't fix it; you need a longer reset at some point. But in the meantime, what does your end-of-workday look like?"
+    },
+    {
+      "role": "user",
+      "content": "I usually keep checking email until 9 or 10pm and then I can't sleep well."
+    },
+    {
+      "role": "assistant",
+      "content": "The evening email loop is a common culprit. Your nervous system stays in alert mode because the workday never formally ends. A hard stop at a set time \u2014 even 7pm \u2014 and a brief transition ritual can signal to your brain that work is done."
+    },
+    {
+      "role": "user",
+      "content": "What kind of transition ritual?"
+    },
+    {
+      "role": "assistant",
+      "content": "Anything that marks a physical boundary \u2014 a short walk, changing clothes, cooking a real meal. The specific activity matters less than the consistency. You're essentially training your brain to associate that action with 'work is done.'"
+    },
+    {
+      "role": "user",
+      "content": "I've tried meditation apps but I find sitting still impossible."
+    },
+    {
+      "role": "assistant",
+      "content": "That's very common. Walking meditation, progressive muscle relaxation, or even mindful cooking can have the same effect for people who find stillness frustrating. The goal is present-moment attention, not sitting cross-legged."
+    },
+    {
+      "role": "user",
+      "content": "Should I be talking to a therapist about this?"
+    },
+    {
+      "role": "assistant",
+      "content": "It's worth considering, especially if it's been a year and the strategies you've tried haven't shifted things. A therapist doesn't have to be for crisis \u2014 it can be very useful for understanding the patterns that keep you in these cycles."
+    },
+    {
+      "role": "user",
+      "content": "Is it normal to feel guilty about resting?"
+    },
+    {
+      "role": "assistant",
+      "content": "Extremely common, especially in high-achieving environments where busyness is treated as a status signal. It's worth examining where that belief came from \u2014 it's learned, not fixed, and it's costing you health without producing results."
+    },
+    {
+      "role": "user",
+      "content": "What's the most important change I could make right now?"
+    },
+    {
+      "role": "assistant",
+      "content": "Protect at least one evening a week as completely non-negotiable personal time \u2014 no email, no work calls. Treat it with the same seriousness you'd treat a client meeting. That boundary, held consistently, creates the proof that rest is survivable."
+    }
+  ],
+  "domain": "mental_wellness"
+}

@@ -1,0 +1,37 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I've been learning Italian for about eight months. I can hold a basic conversation now which feels like a milestone."
+    },
+    {
+      "role": "assistant",
+      "content": "Eight months to conversational level is solid progress. What's your method been?"
+    },
+    {
+      "role": "user",
+      "content": "A mix of Duolingo for vocabulary, a weekly lesson with a tutor on italki, and watching Italian shows with subtitles."
+    },
+    {
+      "role": "assistant",
+      "content": "That's a good combination \u2014 structured input, conversation practice, and immersion. Which shows have you been watching?"
+    },
+    {
+      "role": "user",
+      "content": "I started with Suburra on Netflix. The Roman dialect was tough at first but my ear adjusted."
+    },
+    {
+      "role": "assistant",
+      "content": "Suburra is a great choice \u2014 fast-paced and authentic dialogue. Are you planning a trip to Italy to use it?"
+    },
+    {
+      "role": "user",
+      "content": "Next year hopefully. I want to feel confident enough to navigate a meal and a museum without defaulting to English."
+    },
+    {
+      "role": "assistant",
+      "content": "That's a realistic and achievable goal. Italians are very warm to people who make the effort to speak the language."
+    }
+  ],
+  "domain": "language_learning"
+}

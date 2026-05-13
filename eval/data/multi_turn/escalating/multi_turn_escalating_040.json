@@ -1,0 +1,127 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I start counseling/therapy in a few days (I'm freaking out) but my main fear is that I'll cry and embarrass myself, is it something to worry about?"
+    },
+    {
+      "role": "assistant",
+      "content": "It is not uncommon to be a bit nervous meeting your therapist (or another person) for the first time. Your therapist understands that calling and getting an appointment was a big step for you and will do their best to put you at ease. Providing a safe environment for our clients includes not judging them and being comfortable with the information and emotions that they share with us. It is ok to cry and to trust that the therapist will honor this as part of your process."
+    },
+    {
+      "role": "user",
+      "content": "I am on the track and softball team. My school is small, so I play all four sports it offers. I feel obligated to do track because I'm not a horrible runner, and my dad wants me to. The catch is is that the days before a track meet and the morning of, I get sick and cry."
+    },
+    {
+      "role": "assistant",
+      "content": "Does anyone notice that you get sick and cry on track meet days?Have you told anyone?From what you write, as much as you would like to please your school and dad, something within you doesn't quite want to fully follow through.Step one in life always is to know what you want and what your limits are. \u00a0 It already is difficult to avoid listening to your body.Try understanding what is difficult in telling your father that you'd like doing as he wishes, only are not able to do so because you are emotionally and physically distraught on the days you have track.After finishing the season for this year with your school's track team, then expect to concentrate on taking care of your own need to not do track.Hopefully your father will understand and care about your problem. \u00a0 If he does not and track is more important than your well being, then you have a different problem entirely."
+    },
+    {
+      "role": "user",
+      "content": "My daughter is in later elementary school. She can't color in the lines. Her words jumble together when she writes unless there are big spaces or she skips lines."
+    },
+    {
+      "role": "assistant",
+      "content": "It's hard to tell from the information that you were able to provide here, but talk with her elementary school a guidance counselor. Someone working with the school (usually a school psychologist) should be able to evaluate her to see if she needs extra help and to tell you more clearly what may be happening."
+    },
+    {
+      "role": "user",
+      "content": "I am a female and in my early teens. I don't want to feel afraid of people. When I meet someone, I know that they are okay, but I still feel afraid."
+    },
+    {
+      "role": "assistant",
+      "content": "Maybe the problem is learning to trust yourself to not be afraid other people!Reflect on what you believe would increase your trust of believing your own judgement on whom to trust.If you've had any type of violation during your growing up years or witnessed someone in your family be violated, emotionally, physically or through some terrible accident or incident, then you may hesitate to believe other people are safe and not to be feared.Give yourself plenty of time and reassurance that as long as you are making sincere effort to increase you comfort around other people, eventually you will succeed."
+    },
+    {
+      "role": "user",
+      "content": "I am always down and out. Could this be postpartum depression?"
+    },
+    {
+      "role": "assistant",
+      "content": "Probably. \u00a0I always tell the new parents I work with (and this is just as true for dads as it is for moms) that if you are feeling off, seek help. \u00a0Postpartum Support International (www.postpartum.net) is a great place to start finding resources and locating support."
+    },
+    {
+      "role": "user",
+      "content": "I have been diagnosed with posttraumatic stress disorder due to my military experiences. Not a year ago, I had a car accident. Could this experience add more problems?"
+    },
+    {
+      "role": "assistant",
+      "content": "You are right on to recognize that the effects of trauma can be cumulative. \u00a0It is very possible that a car accident could lead to an increase in PTSD symptoms that were related to other traumatic experiences.If you have been deployed to a combat area, you are most likely eligible for free counseling services through the VA Vet Centers. \u00a0The Vet Center clinicians typically have a lot of experience working with military trauma. Here's a link to a directory of Vet Centers:http://www.va.gov/directory/guide/vetcenter.aspYour service and sacrifice is greatly appreciated."
+    },
+    {
+      "role": "user",
+      "content": "I find myself being very outgoing most of the time, but there are some times when I don't know what to say. I don't even want to talk at all. It's like, I search for the right thing to say and nothing ever comes out. I don't know if I'm outgoing only to fill the void of not knowing what to say. I don\u2019t know if people like that about me. I'm very self-conscious and always think people are talking about me, so it makes me have a cold shoulder and not want to talk."
+    },
+    {
+      "role": "assistant",
+      "content": "Would you feel more secure in conversations if instead of talking soon after meeting someone or entering a social situation, you simply listened attentively to the other people?This way you'd have a more secure idea of what topics the group likes talking about and whether you like talking about these topics as well.Maybe you simply are in groups or situations in which you don't care for the people or focus.Start by trusting your own evaluation of your true interest in being among the groups in which you are.Maybe you simply need new and different groups."
+    },
+    {
+      "role": "user",
+      "content": "I have PTSD. The side effects are really bad and have impacts on sex, anger and my relationships. I even lost my job month ago.    How can I get my life back?"
+    },
+    {
+      "role": "assistant",
+      "content": "It is brave of you to\u00a0speak out, PTSD is not a joke and it can quickly take a\u00a0toll on all aspect of life. Please, know that you are not alone and with the right help you can overcome these challenges.\u00a0Living with PTSD can be very emotionally exhausting, but you can learn ways to cope with its challenges and find\u00a0fulfillment in your life again. This means being proactively involved with the process, learning about the problem and positive ways to manage it can be a good start. This can also mean seeking professional help. It is important to address the problem both at the\u00a0physiological and psychological level, this can mean using medication that is prescribed by a\u00a0MD\u00a0to reduce the intensity symptoms and also working with an experienced\u00a0licensed professional. Having healthy life habits such as good sleep hygiene, healthy diet, staying away from self-medicating with drugs and alcohol, and exercising can help reduce the intensity of the symptoms as well. Please, consult with a licensed professional close to you to get more information on resources you can possibly find helpful to you."
+    },
+    {
+      "role": "user",
+      "content": "I was a single mom most of their growing up life and have guilt about trying to work three jobs and being gone a lot. My children are successful with their own business's, have lots of nanny and cleaning help, but I just feel they have such a great opportunity to spend it with their kids."
+    },
+    {
+      "role": "assistant",
+      "content": "You seem to have been a very positive influence in your kids' lives.They may have worked so hard because they understood how difficult and tiring your life was as a single mom.I feel you are seeing your kids' lives through the measurement of how much toil was in your life as a single mom.In other words, what you see your kids overlooking or not appreciating, may remind you of your wishes during the many years you raised your kids.If it helps you and is possible, then maybe you could spend more of your own time tougher with your grandkids. \u00a0This may give some reward for the many years you spent working to support your kids and had no choice in the amount of time you had with your kids.As far as your kids relationship to their kids, it is now their turn to raise them as they wish, within ethical boundaries of course.Depending on the topics you and your kids talk about, consider to bring up your concern as to whether they feel their kids, your grandkids, are missing anything due to the limited time they have with the parents."
+    },
+    {
+      "role": "user",
+      "content": "My girlfriend just quit drinking and she became really depressed. She told me that she wants to move. What can I do to help her? I want her to stay."
+    },
+    {
+      "role": "assistant",
+      "content": "I would say talk to her about her depression. The best thing you can do is let her know that you are there for her as a support system. I would encourage her to talk more if it helps and encourage her to get move involved in doing activities she likes to do. Also, getting connected in a community of people is important to help with feeling depressed. Encourage her to speak with a therapist or counselor to address her depression as she has made a major change in her life by deciding to stop drinking. She may believe moving is the best to help with this. You can share with her that you want her to stay and express to her how you feel. Ultimately, you will have to respect her boundaries and the decision she chooses to make. She may want to move and this may be what she feels is best for her life. If she does choose to move that will be her decision. It sounds like she is trying to do what is going to make her happy. Maybe staying in the city she is currently in is causing her more feelings of sadness."
+    },
+    {
+      "role": "user",
+      "content": "Sometimes, I'm fine and can go out or meet people, but other days, my heart races and words physically cannot come out of my mouth. I've always thought it was normal and I was just nervous, but the other day, it took me almost 30 minutes of sitting in my car to find the courage to enter Target by myself."
+    },
+    {
+      "role": "assistant",
+      "content": "First, be aware that each end every one of us has anxiety at some point. That certainly seems to fit what you're describing here, but that doesn't mean you have an anxiety disorder, necessarily. That's where there is a difference. Anyone who has a hard time with public speaking or feels uncomfortable in large crowds, for example, is experiencing anxiety.It sounds like it would be helpful to look at the differences between the days when you are more comfortable on the days that you are not. If you notice your anxiety is keeping you from doing things that you need or want to do, it may be helpful to talk with and mental health professional.I wonder also whether your appetite and sleeping patterns are the same or similar to how they were before you experienced this anxiety, when your anxiety started, and whether you feel more comfortable when someone you trust is there with you.If you have an idea of times or situations in which you feel anxious, consider carrying a small smooth rock or another object that makes you feel calm and centered. Perhaps you can keep it in your pocket and remember specific comfortable times while you have it in your hand."
+    },
+    {
+      "role": "user",
+      "content": "He is always telling me our fights are only and all my fault, he bashes me to our young child, and he is addicted to a few substances."
+    },
+    {
+      "role": "assistant",
+      "content": "The behaviors you describe are boundary violations.\u00a0 You can not change your spouse, but you can respond to his behaviors in ways that protect your boundaries and ensure your safety.\u00a0 This is very hard to do without support.\u00a0 Finding a therapist who understands the dynamics of abusive relationships may be helpful.\u00a0 If you are not ready to do this, I recommend the book \"Boundaries\" by Dr. Henry Cloud and Dr. John Townsend.\u00a0 It's a great resource for helping one recognize boundary violations and learning how to respond to them in ways that are constructive!"
+    },
+    {
+      "role": "user",
+      "content": "Sometime when small thing happen, like losing a comb, I get furious. I even start throwing things. Do I have a problem?"
+    },
+    {
+      "role": "assistant",
+      "content": "Anger does have its place.\u00a0 When anger is experienced often or the magnitude of it does not fit the scenario, such as your losing comb, the question becomes, what does losing that comb mean to you?\u00a0 In the very split second that you have realized the comb is missing, there is a reaction that occurs within you, accompanied by an image or thought that like lightening flashes so quickly that you may not be aware what it is.\u00a0 As Sherry noted below, awareness.\u00a0 Awareness is fundamental.\u00a0 Becoming aware of ourselves and what is happening internal that sparks it off.\u00a0 The next time you feel angry from a \"small thing\", stop and ask yourself, why am I angry that this is lost?\u00a0 Find out what you are thinking or how you are speaking to yourself.\u00a0 You will become aware and once you are aware, steps can be taken to alter the experience for the better. A professional can assist with that!"
+    },
+    {
+      "role": "user",
+      "content": "I\u2019ve known my boyfriend for several years. We were friends for a long time. In 2013 we started a relationship, and he even asked me to move in with him since I lived out of state. I planned to move in with him in 2014 after I finished school and he found a job. However, during this time we had a few arguments and broke up with each other for a short period of time. We decided later to make it work. Shortly after, I found out that I was pregnant. I wanted to tell him during his next visit. However, he never came to see me and instead asked me for money. After I gave him money, he quit answering my phone calls and texts.    Soon after, I experienced a miscarriage. I texted him about what had happened, and he didn\u2019t seem to care. I was extremely hurt by this. I still decided to move back as I had originally planned. He helped me with the move and replaced the money I had lent him. During this time, I asked if he wanted to be in this relationship because I needed to know. Although he says he did, I hardly ever see him. He never got a job, which was in the original plan.    After that, we both started seeing other people for a short amount of time but once again got back together. Once we got back together, I cut all ties with the former relationship I had been in. I thought he had too. But I found out that he did not attempt to do as I did and was still talking with another woman. In fact, he had even sent inappropriate pictures to her. When I confronted him about this, he wasn\u2019t apologetic. He said that he only did it to get even with me and was actually mad at me for looking through his phone. He even closed his car window on my finger and tried to throw me out of his car. I don\u2019t know what to do."
+    },
+    {
+      "role": "assistant",
+      "content": "There are plenty of red flags that you have been presented with:Several breakups\u00a0Not holding up his end of the bargain regarding workLack of empathy for your miscarriageLying about his involvement with another womanPhysical violence, which is of most concern.\u00a0This seems to be a very unhealthy relationship. In my experience, relationships such as these rarely become positive ones. Violence is never okay and regardless of his reasoning (you looking through his phone), it is indefensible. You have to look at these red flags and ask yourself, \u201cIs this really someone I want to marry? Is he an asset to my life?\u201d I think you\u2019ll realize he is not.Best of luck to you and please know that you deserve someone who treats you with kindness, dignity and respect."
+    },
+    {
+      "role": "user",
+      "content": "My girlfriend was abused as a child. Now, if I hug or touch her in any kind of way she says she feels as if she is being abused as a child. What might be going on?"
+    },
+    {
+      "role": "assistant",
+      "content": "Was your gf always this way with you or did her withdrawal develop suddenly?Also, are there any other changes going on between the two of you in terms of feeling relaxed and at ease with each other, enjoying each other?Its possible her physical withdrawal, due to her sensitive nature about who touches her and the meaning of touch, reflects an underlying emotional hesitation about her feelings toward you.This can be either strong positive or negative feelings.She may be fearful of becoming more intimately attached to you, and withdraws.She may be actually withdrawing and expresses herself through the amount of touch she wants from others.Best way forward as almost always in a relationship, is to have a gentle conversation to open up the tension between the two of you."
+    }
+  ],
+  "inflection_turn": 6,
+  "domain": "mental_health_counseling",
+  "escalation_speed": "fast"
+}

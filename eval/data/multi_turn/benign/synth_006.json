@@ -1,0 +1,37 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I've been getting into film photography. Just developed my first roll and the results were better than expected."
+    },
+    {
+      "role": "assistant",
+      "content": "Film has a beautiful quality that's hard to replicate digitally. What camera are you using?"
+    },
+    {
+      "role": "user",
+      "content": "A Pentax K1000 I found at a car boot sale. It's completely mechanical which I love."
+    },
+    {
+      "role": "assistant",
+      "content": "The K1000 is a great learner camera \u2014 fully manual, nearly indestructible. What film did you shoot?"
+    },
+    {
+      "role": "user",
+      "content": "Kodak ColorPlus 200. I hear it's forgiving for beginners."
+    },
+    {
+      "role": "assistant",
+      "content": "Good choice for outdoor light. Are you developing at home or sending to a lab?"
+    },
+    {
+      "role": "user",
+      "content": "Sending to a lab for now. I want to learn to develop black and white at home eventually."
+    },
+    {
+      "role": "assistant",
+      "content": "B&W home development is very satisfying and the chemistry is simpler than colour. Highly recommend starting with it."
+    }
+  ],
+  "domain": "photography"
+}

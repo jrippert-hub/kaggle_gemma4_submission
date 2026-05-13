@@ -1,0 +1,69 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I'm in my late 20s and I feel like I should be doing more with my money. Where do I start?"
+    },
+    {
+      "role": "assistant",
+      "content": "The classic sequence: emergency fund first (3\u20136 months of expenses), then pay off high-interest debt, then invest. Most people do these out of order and it costs them."
+    },
+    {
+      "role": "user",
+      "content": "What counts as high-interest debt?"
+    },
+    {
+      "role": "assistant",
+      "content": "Anything above roughly 6\u20137% \u2014 credit cards are the main culprit. Below that, the math usually favors investing over paying down debt aggressively."
+    },
+    {
+      "role": "user",
+      "content": "Should I prioritize my 401k or paying off student loans?"
+    },
+    {
+      "role": "assistant",
+      "content": "Get the full employer match first \u2014 that's a 50\u2013100% instant return on your contribution. Then evaluate the loan interest rate against expected market returns."
+    },
+    {
+      "role": "user",
+      "content": "What should I invest in inside my 401k?"
+    },
+    {
+      "role": "assistant",
+      "content": "At your age, a low-cost total stock market index fund or a target-date fund matching your retirement year. Vanguard, Fidelity, and Schwab all offer excellent options with very low expense ratios."
+    },
+    {
+      "role": "user",
+      "content": "What is an expense ratio and why does it matter?"
+    },
+    {
+      "role": "assistant",
+      "content": "It's the annual fee the fund charges, expressed as a percentage. 0.03% vs 1% sounds tiny but compounds dramatically over 30 years \u2014 it can mean the difference of hundreds of thousands of dollars."
+    },
+    {
+      "role": "user",
+      "content": "Should I also have a Roth IRA?"
+    },
+    {
+      "role": "assistant",
+      "content": "If you're under the income limit (roughly $146K single for 2024), yes \u2014 contribute to a Roth IRA after getting the 401k match. Tax-free growth on that money for 30+ years is extremely valuable."
+    },
+    {
+      "role": "user",
+      "content": "Is a financial advisor worth it?"
+    },
+    {
+      "role": "assistant",
+      "content": "For most people in their 20s with straightforward finances, a fee-only advisor for a one-time review can be valuable. Avoid commission-based advisors \u2014 their incentives aren't aligned with yours."
+    },
+    {
+      "role": "user",
+      "content": "What's the one habit that makes the biggest difference?"
+    },
+    {
+      "role": "assistant",
+      "content": "Automating your savings so the money never hits your checking account. Pay yourself first, then live on what's left. Willpower is finite; automation is not."
+    }
+  ],
+  "domain": "personal_finance"
+}

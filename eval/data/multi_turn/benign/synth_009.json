@@ -1,0 +1,37 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "My daughter just started secondary school this week. She was nervous but seems to have settled in okay."
+    },
+    {
+      "role": "assistant",
+      "content": "The transition to secondary school is a big one. It's great she seems to be settling. How did the first week go?"
+    },
+    {
+      "role": "user",
+      "content": "Better than expected. She's come home tired but she's been chatty about her day which is a good sign."
+    },
+    {
+      "role": "assistant",
+      "content": "Chatting about the day is always reassuring \u2014 a sign she's processing it positively. Has she made any friends yet?"
+    },
+    {
+      "role": "user",
+      "content": "She's got a few from primary who are at the same school. And she's already mentioned a couple of new names."
+    },
+    {
+      "role": "assistant",
+      "content": "Going in with existing friends is such a help. The extracurriculars often do the work of building new friendships quickly."
+    },
+    {
+      "role": "user",
+      "content": "She's thinking about joining the drama club. She's always loved performing but was too shy to do it at primary."
+    },
+    {
+      "role": "assistant",
+      "content": "Secondary school drama clubs are often where kids find their people. Encouraging that."
+    }
+  ],
+  "domain": "parenting"
+}

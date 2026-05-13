@@ -1,0 +1,37 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I've been teaching myself guitar for about a year. I can play a few songs all the way through now."
+    },
+    {
+      "role": "assistant",
+      "content": "A year in and playing complete songs is a solid benchmark. What style of music are you working on?"
+    },
+    {
+      "role": "user",
+      "content": "Mostly fingerpicking. I love acoustic folk and singer-songwriter stuff."
+    },
+    {
+      "role": "assistant",
+      "content": "Fingerpicking is technically demanding \u2014 it takes real patience to develop. Are you working with any particular method?"
+    },
+    {
+      "role": "user",
+      "content": "A mix of YouTube tutorials and a book called The Advancing Guitarist. I find video easier for technique."
+    },
+    {
+      "role": "assistant",
+      "content": "That's a good combination. The Advancing Guitarist is excellent for understanding the instrument more deeply."
+    },
+    {
+      "role": "user",
+      "content": "I'm trying to learn Travis picking which is hurting my brain a bit but I can see how it'll unlock a lot of songs."
+    },
+    {
+      "role": "assistant",
+      "content": "Travis picking is one of those techniques where it suddenly clicks and then you can't stop. Keep at it."
+    }
+  ],
+  "domain": "music"
+}

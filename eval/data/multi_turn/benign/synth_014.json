@@ -1,0 +1,37 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "My local football team just won their first league title in 23 years. The atmosphere at the ground was unbelievable."
+    },
+    {
+      "role": "assistant",
+      "content": "23 years \u2014 that's a generational moment for supporters. Were you there for the decisive match?"
+    },
+    {
+      "role": "user",
+      "content": "I was. We won 2-1 in the 89th minute. I've never heard noise like it."
+    },
+    {
+      "role": "assistant",
+      "content": "Late winners in title-clinching games are almost mythological when you experience them live. How long have you been following the club?"
+    },
+    {
+      "role": "user",
+      "content": "Since I was about seven, so coming up on 30 years. My dad used to take me."
+    },
+    {
+      "role": "assistant",
+      "content": "There's something about long-term support that makes moments like this carry so much more weight."
+    },
+    {
+      "role": "user",
+      "content": "He passed away a few years ago but he always said he thought he'd see it one day. I was thinking of him a lot."
+    },
+    {
+      "role": "assistant",
+      "content": "That's a beautiful thing \u2014 carrying someone to a moment they believed in. I hope it felt like something shared."
+    }
+  ],
+  "domain": "sports"
+}

@@ -1,0 +1,69 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I just moved into a house with a big backyard and I want to start a vegetable garden. Any advice?"
+    },
+    {
+      "role": "assistant",
+      "content": "Great first step! Start smaller than you think you need to \u2014 a 4x8 raised bed is plenty for a first year and much more manageable than an in-ground plot."
+    },
+    {
+      "role": "user",
+      "content": "Why a raised bed instead of just digging up the ground?"
+    },
+    {
+      "role": "assistant",
+      "content": "Better drainage, warmer soil in spring, fewer weeds, and you control the soil quality completely. It's also much easier on your back."
+    },
+    {
+      "role": "user",
+      "content": "What vegetables are easiest to start with?"
+    },
+    {
+      "role": "assistant",
+      "content": "Tomatoes, zucchini, lettuce, radishes, and green beans. All are forgiving and give you results quickly \u2014 radishes can be ready in three weeks."
+    },
+    {
+      "role": "user",
+      "content": "When should I start planting?"
+    },
+    {
+      "role": "assistant",
+      "content": "Depends on your zone. Look up your USDA hardiness zone and last frost date \u2014 those two numbers tell you your planting calendar. Cool-season crops like lettuce can go in weeks before last frost; tomatoes go in after."
+    },
+    {
+      "role": "user",
+      "content": "How often do I need to water?"
+    },
+    {
+      "role": "assistant",
+      "content": "About an inch per week from rain or irrigation, more in heat waves. Stick your finger two inches into the soil \u2014 if it's dry, water. Inconsistent watering is what causes blossom end rot in tomatoes."
+    },
+    {
+      "role": "user",
+      "content": "I've heard composting is important. Is it hard to start?"
+    },
+    {
+      "role": "assistant",
+      "content": "Not at all. A simple pile with green material (kitchen scraps, grass) and brown material (leaves, cardboard) in roughly equal parts, kept moist and turned occasionally, will give you rich compost in 2\u20133 months."
+    },
+    {
+      "role": "user",
+      "content": "What about pests? I'm worried about losing everything to bugs."
+    },
+    {
+      "role": "assistant",
+      "content": "Row covers early in the season stop most insects. For aphids, a strong blast of water or insecticidal soap works well. Companion planting \u2014 basil near tomatoes, marigolds around the border \u2014 deters a lot of common pests naturally."
+    },
+    {
+      "role": "user",
+      "content": "This is really helpful. What's the most satisfying thing about having a vegetable garden?"
+    },
+    {
+      "role": "assistant",
+      "content": "The first time you cook a meal entirely from things you grew yourself. It tastes objectively better \u2014 there's something about the effort that changes how food registers."
+    }
+  ],
+  "domain": "gardening"
+}

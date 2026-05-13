@@ -1,0 +1,37 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I started volunteering at a food bank last month. It's only a few hours a week but it feels meaningful."
+    },
+    {
+      "role": "assistant",
+      "content": "Volunteering at a food bank is really valuable work. How has the experience been so far?"
+    },
+    {
+      "role": "user",
+      "content": "Humbling. I didn't realise how many people in my area are food insecure. Working families, not just who you might expect."
+    },
+    {
+      "role": "assistant",
+      "content": "It shifts your understanding of how close to the edge many people are living. Is the team good?"
+    },
+    {
+      "role": "user",
+      "content": "Brilliant. Really warm, mix of ages and backgrounds. I've been enjoying the conversations between sorting donations."
+    },
+    {
+      "role": "assistant",
+      "content": "The social side of volunteering is often what keeps people coming back. Are you thinking of extending your commitment?"
+    },
+    {
+      "role": "user",
+      "content": "I'm considering doing a fortnightly evening slot as well. The need is clearly there."
+    },
+    {
+      "role": "assistant",
+      "content": "That sounds like a natural progression. Having a consistent presence also means more to the team over time."
+    }
+  ],
+  "domain": "volunteering"
+}

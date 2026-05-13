@@ -1,0 +1,37 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I started running again after a two-year break. Did 5K this morning and my legs are destroyed."
+    },
+    {
+      "role": "assistant",
+      "content": "Welcome back to running! DOMS after a long break is brutal. How did the 5K feel otherwise?"
+    },
+    {
+      "role": "user",
+      "content": "Surprisingly okay cardiovascularly. My lungs held up better than I expected."
+    },
+    {
+      "role": "assistant",
+      "content": "Cardio comes back faster than leg strength. Are you following a structured plan or just going by feel?"
+    },
+    {
+      "role": "user",
+      "content": "By feel for now. I want to build up to a 10K by the end of the summer."
+    },
+    {
+      "role": "assistant",
+      "content": "Plenty of time for that. The main thing at this stage is not ramping up too fast. How often are you planning to run?"
+    },
+    {
+      "role": "user",
+      "content": "Three times a week. Maybe a longer run at weekends once I build a base."
+    },
+    {
+      "role": "assistant",
+      "content": "That's a sensible approach. Strength training on the off days will help protect your knees too."
+    }
+  ],
+  "domain": "fitness"
+}

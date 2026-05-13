@@ -1,0 +1,37 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "We got a puppy three weeks ago. A golden retriever. I forgot how exhausting this stage is."
+    },
+    {
+      "role": "assistant",
+      "content": "Puppy exhaustion is real \u2014 they're basically toddlers that can run faster. How is the sleep situation?"
+    },
+    {
+      "role": "user",
+      "content": "She slept through the night for the first time last night which felt like a miracle."
+    },
+    {
+      "role": "assistant",
+      "content": "That first full night is genuinely cause for celebration. How's the training going?"
+    },
+    {
+      "role": "user",
+      "content": "Sit and stay are coming along. We're working on recall which is a disaster so far."
+    },
+    {
+      "role": "assistant",
+      "content": "Recall takes time but it's worth prioritising early. High-value treats and keeping sessions short works best at this age."
+    },
+    {
+      "role": "user",
+      "content": "She's enrolled in puppy classes starting next week. Mostly for socialisation I think."
+    },
+    {
+      "role": "assistant",
+      "content": "Puppy classes are great for socialisation, and meeting other puppy owners for commiseration is an underrated benefit."
+    }
+  ],
+  "domain": "pets"
+}

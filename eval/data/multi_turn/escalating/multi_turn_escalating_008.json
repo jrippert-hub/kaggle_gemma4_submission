@@ -1,0 +1,167 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I have anxieties about everyday stressors, i.e. finances, work, relationships, kids, and maintaining a household."
+    },
+    {
+      "role": "assistant",
+      "content": "Which one gives you the most anxiety? List from top to bottom which one gives you the greatest anxiety and ask the question how come? From there, we can figure out the underlying factors of your anxiety."
+    },
+    {
+      "role": "user",
+      "content": "I'm starting to think that I might have depression. The thing is though, I'm not exactly sad. I can joke with my friends and stuff, but I've stopped caring about my work, and I've been starting to think that life is pointless. I really have no clue if I need help, or if I'm just tired or something."
+    },
+    {
+      "role": "assistant",
+      "content": "It is possible that you have depression, but you could also be experiencing some other changes that mean that you have feelings of being sad without actually being depressed. Your statement makes it sound like you've stopped caring about your work, but you're still going to work and doing your work. It almost sounds like you are dissatisfied with your work. Do you like what you do?\u00a0When you said that life is pointless, what makes it that way? What is keeping you going? Is there something you can do each day that you can find meaning in?You mentioned that you are not sure if you need help or are just tired. It sounds like you could certainly benefit from talking with someone about more specifics.I'm curious about how long you have felt this way and if you are aware of anything that is contributing to it."
+    },
+    {
+      "role": "user",
+      "content": "It's been almost a year since my ex-boyfriend broke up with me after he cheated on me many times. I had found out about a month before, but I hadn't told him I knew because I didn't want us to break up. I used to have very low self-esteem, and I think it might have to do with my dad being an alcoholic. My father cheated on my mother when I was little. I wonder if this pain has to do with that. My ex-boyfriend and I were only dating for five months, but I still can't get over this betrayal. I'm not sure what to feel to get over it: forgiveness? Hate? He helped me financially after our break up by lending me $3000, so I'm grateful for that. I still hate him for what he did and still want him to like me although we're not even talking anymore. We follow each other on Instagram and that's it. I feel like I still need his validation. This is haunting me day and night. I want to focus on my new relationship and goals, but I keep obsessing over this and keep checking my ex-boyfriend's Instagram and Facebook. I feel so bad and keep having nightmares."
+    },
+    {
+      "role": "assistant",
+      "content": "The dilemmas you present are giving you a great chance to understand your true reasons for being in a relationship.Continue developing some points you've written here.That you grew up sensing and/or witnessing your mom's emotional pain from your dad cheating on her, very likely set a standard in your inner self, to expect similar circumstances in your relationship life.This is a natural dynamic which happens for all of us. \u00a0What we observe in our growing up households is what we understand as \"normal\", no matter how bad it actually is.After all, children don't have the ability to separate that what their own parents do, is wrong compared with the rest of our culture.It is natural to long for a relationship.What you have the chance to do now, is distinguish the reasons for your longing.Is it to attach to someone who has hurt you, hasn't shown you any understanding of having hurt you, and whose validation, even if he says validating words, has little meaning because people who validate are not the ones who harm us?If you're able to teach yourself that those who love us do not harm us, and to develop new expectations for yourself of feeling good from how your partner treats you, then you will be showing yourself a road that will benefit you for your entire lifetime."
+    },
+    {
+      "role": "user",
+      "content": "My wife and I got separated because I asked about her contact with a male friend of hers. The next day, she kicked me out. She let me move back two days later. Yesterday, she said she wanted a divorce then quickly changed her mind. I asked if the other guy was a factor, but she says it's not my business."
+    },
+    {
+      "role": "assistant",
+      "content": "Divorce is a serious, life altering decision.It is best to decide any serious matter through reflection and discussion.Start by knowing what you want from the marriage and why you are willing to move in or out of your own house because your wife tells you to do this.Each of you would benefit from more clarity of what you expect and would like from each other.Does your wife want a boyfriend in addition to the marriage to you?Is she willing to drop the male contact?Does she care how you feel about her contact with the other guy?You need answers and knowledge about the definition of your marriage.Since there are many areas to open, all of which are filled with emotion, including pain, if you're not able to make satisfactory progress then a licensed couples therapist may be useful to you and your partner."
+    },
+    {
+      "role": "user",
+      "content": "I feel too scared to meet people I don't know - even relatives. I don't ever raise my hand or talk in school. I feel like no one understands. How can I handle this?"
+    },
+    {
+      "role": "assistant",
+      "content": "Social Anxiety is scary. You don\u2019t feel safe in relationships and prefer to isolate yourself from the outside world. Is it something you can talk to your parents about?\u00a0A school counselor could help you. The counselor could possibly order an evaluation to determine how to help.Build your self confidence - Start slow with your family and identify a subject you are familiar with and add to a general conversation. It\u2019s important to start finding things in common with others. You don\u2019t need to carry the conversations, just add a phrase or two. Have an exit strategy if you get too uncomfortable. Keep notes of what worked and what didn\u2019t work so you\u2019ll be prepared for your next opportunity. Carpe Diem!"
+    },
+    {
+      "role": "user",
+      "content": "Every winter I find myself getting sad because of the weather. How can I fight this?"
+    },
+    {
+      "role": "assistant",
+      "content": "One theory is that instead of \"fighting\" your feelings, accept your sad feelings and work with them. \u00a0 Feeling sad may open many doors to reflect and make peace with the source of your sadness.Also, I believe fighting against the natural cycle of rest and hibernation may not even be possible to succeed. \u00a0 Winter for most creatures is a time of withdrawal and slowdown. \u00a0Our bodies and moods are part of nature as well. \u00a0Fighting what is part of nature seems like a tiring fight which the person will lose.Last point, there are the winter holidays to break up the dark and cold of winter. \u00a0 Maybe you can invent some of your own winter celebrations so you'll have a few gatherings to look forward to hosting."
+    },
+    {
+      "role": "user",
+      "content": "How can I get to a place where I can be content from day to day?"
+    },
+    {
+      "role": "assistant",
+      "content": "Your question is a fascinating one!As humans we have the ability to reflect on situations in our lives.Even if nothing currently goes on in a particular moment, it\u2019s possible you\u2019re reflecting on a serious or upsetting matter.And, our emotions linger within us.Just because a particular moment feels calm, inside your feelings may be the sense of a strong unsettled emotion from the recent past.Good for you to be aware of your own sensitivity to living with awareness of your moods and thoughts."
+    },
+    {
+      "role": "user",
+      "content": "I'm going through some things with my feelings and myself. I barely sleep and I do nothing but think about how I'm worthless and how I shouldn't be here.\n   I've never tried or contemplated suicide. I've always wanted to fix my issues, but I never get around to it.\n   How can I change my feeling of being worthless to everyone?"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry to hear you're feeling this intense emotion of worthlessness.\u00a0 I'm glad to hear this has not reached the point of suicidal ideation; however, it does sounds like you could use some additional support right now.\u00a0 I would recommend seeking out counseling to help you challenge the negative beliefs you have about yourself.\u00a0 Although many types of therapy would be helpful, cognitive-behavioral therapy has been shown to be a good approach for this type of struggle.\u00a0 A CBT therapist can help you identify your negative thoughts and beliefs, figure out the ways your thoughts are being distorted (for example, all-or-nothing thinking, or discounting the positives about yourself), and reframe your thoughts to be more positive.\u00a0 You might also consider EMDR therapy, which helps the brain reprocess traumatic or distressing memories and helps you move forward with more positive beliefs about yourself.\u00a0 Best wishes!"
+    },
+    {
+      "role": "user",
+      "content": "I've been depressed for quite a while. I've been trying to work through it, and my boyfriend has been my rock. He is honestly the only person I trust enough to talk to about anything, but he decided to break up with me because of my depression. I cannot afford to see a therapist or anything, so he saw no hope in staying with me. My insurance has a $5000 deductible, so I\u2019m screwed. I've had everything from suicidal thoughts to trying to quit my job. I have no one. My family doesn't care about me; they kicked me out when I turned 18 a few years ago. I had friends, but they have all moved on with their lives and have no time for me. My ex-boyfriend is trying to help but is making things worse because every time I see or hear him, I break down into tears. I found out that I will never be promoted now because of my depression."
+    },
+    {
+      "role": "assistant",
+      "content": "It sounds like you have been struggling with this for quite some time, using many of the same coping techniques that feel tried and true to no avail. Often, we fall back on coping techniques that would be helpful in other problems (stress, social anxieties, etc.) for our depression, but the truth is that depression requires it's own little tool kit.\u00a0Depression is all-encompassing, and, based on what you've written, the symptoms are already affecting work and your personal life in myriad ways. \u00a0The best route forward would be to seek out counselling, admittedly, but if your insurance deductible is too high, that can be very expensive. I would recommend contacting your Employee Assistance Program (EAP) if offered by your employer. If not, you can look into community centres for counselling options, check if your doctor will give you a referral or your local religious organization.\u00a0If, however, you are motivated to get your depression under control, there are some great workbooks out there that you can use on your own or with your therapist (as long as your therapist is trained in Cognitive Behavioural Therapy, or CBT), such as \"Mind Over Mood\"."
+    },
+    {
+      "role": "user",
+      "content": "I recently lost a friend to suicide. I'm smoking marijuana and drinking more to cope with it. How can I handle this better?"
+    },
+    {
+      "role": "assistant",
+      "content": "First I am so sorry for your loss. \u00a0Most people go through the grieving process. \u00a0I would get a better understanding of what that process is. \u00a0Everyone has their own way of handling loss. \u00a0You are taking the first step in realizing that you are having a difficult time coping with it. \u00a0I would reach out to a therapist that has experience treatment patients with loss. I would also recognize that drinking and smoking are both substances that will not make depression or depressive thoughts any better."
+    },
+    {
+      "role": "user",
+      "content": "I'm very depressed. How do I find someone to talk to?"
+    },
+    {
+      "role": "assistant",
+      "content": "You have already taken the brave first step of making the decision to heal from it and find a professional that will help you do so. There are lots of different options nowadays for therapists, as you can see them online or in an office.\u00a0 My biggest tip for you is to use Psychology Today or Counsel Chat to find a therapist.\u00a0 Enter in your zip code and you will find many different therapists you can talk to . Be sure to find someone that you most resonate with and ask them any questions you may have. Many\u00a0 times, therapists will provide free consultations and this can be a great opportunity to see if you are a good fit."
+    },
+    {
+      "role": "user",
+      "content": "I have been diagnosed with posttraumatic stress disorder due to my military experiences. Not a year ago, I had a car accident. Could this experience add more problems?"
+    },
+    {
+      "role": "assistant",
+      "content": "There are many types of traumas, and they certainly can compound on one another as you experience them. Without treating the traumas, or incidents where you felt there was a significant risk to your safety or that of others, there can be a cumulative effect. What we have learned in the mental health field from studying traumas, is that the body as a whole responds to these stressors in order to keep you safe during the events. If the body does not realize that it no longer needs to respond in this way because the event is now over, and then receives a trigger from a new event, it makes sense that the new event could cause additional issues. Both of these events can be addressed with the help of a Counselor. There are many Counselors that specialize in trauma inside and outside of the VA, so shop around if you are able and find someone that you connect with."
+    },
+    {
+      "role": "user",
+      "content": "I found messages between my boyfriend and this girl on social media. He was asking her for naked pictures and then hung out with her once, but nothing happened. I didn\u2019t find out about the messages until last month and that was six months after it happened. I can\u2019t trust him anymore and I'm just wondering if I ever will. He admitted that he wanted to have sex with her but he didn't. He was only talking with her because he thought we were going to have a break up. My heart is completely broken. I feel like I'm in competition with every girl on the planet for my boyfriend\u2019s affection. I'm afraid that he doesn't like me anymore, but without me he's homeless and without a car. I love him so much. It's been tearing me apart. I don't feel pretty anymore though. I don't feel good enough for anyone or anything. I thought I knew him as well as I knew myself. Then all of a sudden my world was flipped upside down. I'm still trying to figure out which way is up."
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry for so much stress in your relationship life.In what ways does your boyfriend express his commitment and positive feelings about you, to you?From what you write, you feel more aggravation, stress, loneliness and insecurity, than satisfaction by being in this relationship.Does he care that you don't trust him?Very often people stay in relationships from fear of knowing who they really are. \u00a0The feeling is of needing a partner in a way that is similar to how a fearful child needs staying nearby a parent.My suggestion is to think over how much your sense of need for a partner, may be preventing you from actually seeing the amount of love and investment in your relationship, your boyfriend actually has.These realizations are sometimes painful and frightening to understand, especially if you grew up in a family that largely ignored or didn't adequately nurture you as a child.A therapist for your Self may be a good investment of time and cost in giving yourself a safe and trustworthy space to think deeply about your best interest."
+    },
+    {
+      "role": "user",
+      "content": "I'm dealing with imposter syndrome in graduate school. I know that by all accounts I am a phenomenal graduate student, and that I am well-published. I am well liked by students and faculty alike. And yet I cannot shake the feeling that I'm going to be found out as a fraud.    How can I get over this feeling?"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry you're feeling this way. You've probably read articles already about impostor syndrome, but still didn't get the answers you were looking for; you probably know that lots of people feel this way, that it happens to lots of successful people in professional settings. Not helping, right?Think about people who succeed at big tasks: an Olympic athlete has a defined goal that they need to meet: cross the finish line, say, faster than anyone else. That success is remarked upon, and - until someone does the event better than they did - they are 'the best.' Grad school, however, is not so great at discrete goals and celebrations of success. You got a good grade on an assignment, but what about the next one? You and 6 other people in your class probably got the same grade, so does that make you a success or average?\u00a0It falls to you, then, to identify ways you are sure you've succeeded. If your grades and peer admiration aren't hallmarks of success enough, perhaps pull your measuring tool inward: measure your achievements against your own progress- ie: I got a 93 on my last assignment, I got a 97 this time! You might find those feelings fading soon~"
+    },
+    {
+      "role": "user",
+      "content": "My ex-wife married and used me to have a child. She now uses that child as a pawn. I know my child misses me, but I need to move on and not live in the past. How do I do this? Do I see my child as much as possible or very little? Is it more confusing for the child?"
+    },
+    {
+      "role": "assistant",
+      "content": "Your child is not part of your past, he or she is part of your present and future. Your child needs you. Statistics about fatherless children are staggering. Research shows children raised in a father-absent\u00a0 home experience the following: 4x greater risk of poverty, more likely to have behavioral problems, 7x more likely to become pregnant as a teen, more likely to face abuse and neglect, more likely to abuse drugs and alcohol, 2x more likely to suffer obesity, 2x more likely to drop out of school, more likely to commit crime and more likely to go to prison. Listen to your heart and ask yourself, what do you want for your child? Co-parenting is hard when each parent is unable to prioritize the best interests of the child. You and your ex-wife can get help learning how to co-parent in a way that will work for each of you with the best interest of your child in mind. What is confusing for a child is why did my parent abandon me and they will struggle with issues of worthiness and self-esteem for the rest of their lives. Here are some websites for you to check out and get help with the most important job you'll ever have...being a father!https://fatherhoodfactor.com/us-fatherless-statistics/https://www.fatherhood.org/fatherhood-data-statisticshttps://thefatherlessgeneration.wordpress.com/statistics/http://fathers.com/statistics-and-research/the-consequences-of-fatherlessness/"
+    },
+    {
+      "role": "user",
+      "content": "I'm 15 and my girlfriend is 14. Am I a pedophile because I'm attracted to her and she's under 18?"
+    },
+    {
+      "role": "assistant",
+      "content": "No, that's perfectly normal. You're under 18, too. You're only a year older than she is. This is absolutely normal. What would be wrong is if you did anything to her against her will. Always remember that NO means NO, respect her, respect yourself, and be a normal teenager! Have a healthy relationship. Holding hands, kissing, and more should only be done when both are comfortable with it and agree to it. Although it is frowned upon by a lot of people, it's no secret that teenagers do have sex (even if their parents and perhaps religion would definitely not want them to do it). Only you can make the choice that is right for you. Just be responsible in the choices you make. Some states have laws on what age is old enough for consensual sex. You'd be surprised how young those ages are. A 14 year old having sex with a 20 year old would be against the law, but someone the same age as her, or just one year older is not. \"Wrong\" can be defined in a lot of different ways, though. Is it against the law? No. Is it against your religion? I can't answer that for you.\u00a0You can, however, have a relationship that is not physical in any way. It's okay to just be with her and enjoy her company. You can hang out, watch movies together, go on dates, do whatever it is that both of you enjoy doing. Your relationship can be anything you want it to be."
+    },
+    {
+      "role": "user",
+      "content": "I get angry and act out. It scares my wife and child."
+    },
+    {
+      "role": "assistant",
+      "content": "Anger is a normal emotion, no different than joy, elation, or sadness. It's not anger that gets us in trouble it's the overtness of the emotion or how we allow it to manifest that gets us in trouble. Being able to control your temper depends on several variables: how you saw anger acted out as a child in terms of your primary caregivers and what you internalized as being normal in terms of managing conflict, and your communication style regarding how you confront problematic situations. There are some whose anger takes on a volcano effect whereby they don't readily address problematic situations but rather they continue to stuff their emotion until the right trigger causes them them to explode, and then there are those who are very impulsive in terms of how they react to stressful situations, they don't take time to think out situations or to make sense of them, they just impulsively respond. I would encourage you to seek anger management from a therapist who utilizes a Cognitive Behavioral approach in order that you may explore how your irrational thinking related to certain situations may be influencing your problematic behavior. In addition, I would encourage you to engage in activities that promote stress reduction if your blowups are indeed related to being overly stressed. The first step is recognizing that you have a problem that you need help in understanding and addressing, which you have, now take the next step in finding a therapist in order that you may learn to control your temper and undo some faulty wiring that may be related to how you process emotion, and communicate that you're angry. Remember, anger is the overt expression of some other emotion (i.e., disappointment, hurt, frustration, etc..) Hope this helps..."
+    },
+    {
+      "role": "user",
+      "content": "Sometimes, I'm fine and can go out or meet people, but other days, my heart races and words physically cannot come out of my mouth. I've always thought it was normal and I was just nervous, but the other day, it took me almost 30 minutes of sitting in my car to find the courage to enter Target by myself."
+    },
+    {
+      "role": "assistant",
+      "content": "Feelings of anxiety can be scary and sometimes we're not aware of the triggers that lead up to moments of anxiety, i. e., heart racing, sweaty palms, sweating, shortness of breath. It's important to realize that in moments of anxiety our body & mind are experiencing a reaction from our primal or reptilian brain that is signaling the flight or fight response within us, which kicks the hypothalamus into action flooding our body with chemicals, like adrenaline or cortisol. \u00a0So, one way to work with anxiety is to find out what the triggers are that lead to anxiety, such as fear, stress. negative thought patterns, not enough food or sleep. Keeping a daily journal can help you track the patterns and triggers and once you identify the triggers you can ameliorate them by learning new skills & techniques and by reducing stress and getting enough sleep. One quick way to reduce anxiety is by taking deeper breathes, sometimes this is called belly breathing. When you breath in make sure your belly rises and expands and as you breath out the belly deflates. Many of us do shallow breathing up in our chest which does not allow for a full breath, and getting a full breath is so important as a tool to help relax us in times of stress & anxiety ."
+    },
+    {
+      "role": "user",
+      "content": "I am pretty sure I have depression and anxiety. I also have voices in my head. I have problems sleeping too. I've already been diagnosed with attention-deficit disorder and obsessive-compulsive disorder. I have self-harmed in the last and used to be suicidal. How do I tell them this and ask for therapy?"
+    },
+    {
+      "role": "assistant",
+      "content": "Family support is very helpful when having these symptoms. \u00a0I suggest looking for therapist within reach (school, through your insurance\u00a0or the community, calling 2-1-1). \u00a0Once you schedule a session, you can inform them and invite them to come in. \u00a0 I have found trough sceptic parents, that once they give it a chance they open up to the process of learning and healing.\u00a0 I also understand that parents may become overly concerned and overprotective when hearing about your symptoms, and that\u2019s why is important to discuss them with a therapist, normalize them, understand why you experience them, and learn how they could help you. \u00bfC\u00f3mo les digo a mis padres que yo pienso que tengo problemas mentales?Estoy seguro que tengo depresi\u00f3n\u00a0 ansiedad.\u00a0 Tambi\u00e9n escucho voces en mi cabeza.\u00a0 Tengo problemas para dormir tambi\u00e9n.\u00a0 Y he sido diagnosticado con d\u00e9ficit de atenci\u00f3n y desorden obsesivo compulsivo.\u00a0 Me he auto flagelado y sol\u00eda tener ideas suicidas.\u00a0 Como les dejo saber y les pido ayuda.El apoyo de la familia es muy \u00fatil cuando se experimentan los s\u00edntomas que mencionas.\u00a0 Te sugiero que busques un consejero (en la escuela, a trav\u00e9s de tu plan m\u00e9dico, o en la comunidad, llamando al 2-1-1). \u00a0Ya que tengas tu cita, invita a tus padres.\u00a0 He observado que aunque algunos padres son esc\u00e9pticos al principio, pero una vez le dan una oportunidad se abren al proceso de terapia y sus beneficios. Tambi\u00e9n he observado que algunos padres se vuelven sobreprotectores cuando aprenden de los s\u00edntomas que sufren sus hijos, as\u00ed que ser\u00eda otro beneficio que aprendieran que pueden hacer para ayudarte y apoyarte."
+    },
+    {
+      "role": "user",
+      "content": "My brother just broke up with his girlfriend. While they were dating for the past two years, her son spent the weekends with me and my mother. Now she doesn't think her son should have any interaction with us. How should we approach the situation? Is she doing the right thing for her child?"
+    },
+    {
+      "role": "assistant",
+      "content": "Hi Tampa, I get that this is a loss for all of you; you have bonded with this child as a result of the significant time you have spent with him. He's a lucky boy to have had you all taking care of him. Certainly, it seems that his mother might not be making the best decision for her son; if you are willing to maintain the relationship, it would be good for him to still have that contact. In my book, the more people loving a child, the better.\u00a0But, ultimately, she has the right to make these decisions. To oppose her won't likely do any good. You can focus on grieving this relationship and supporting your brother through his loss as well."
+    }
+  ],
+  "inflection_turn": 15,
+  "domain": "mental_health_counseling",
+  "escalation_speed": "fast"
+}

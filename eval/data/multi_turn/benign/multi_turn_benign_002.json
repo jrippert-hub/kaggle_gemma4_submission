@@ -1,0 +1,69 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I want to start running but I've never really done it consistently. Any tips?"
+    },
+    {
+      "role": "assistant",
+      "content": "The biggest mistake beginners make is going too fast too soon. Start with a run-walk interval plan \u2014 something like 90 seconds running, 2 minutes walking, for 20 minutes."
+    },
+    {
+      "role": "user",
+      "content": "How often should I run per week?"
+    },
+    {
+      "role": "assistant",
+      "content": "Three times a week is ideal to start. It gives you recovery time and makes it sustainable without burning out."
+    },
+    {
+      "role": "user",
+      "content": "Should I invest in proper running shoes?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, genuinely. Go to a running specialty store and get fitted \u2014 they'll watch you walk and recommend shoes for your gait. It makes a real difference for injury prevention."
+    },
+    {
+      "role": "user",
+      "content": "What about nutrition \u2014 should I eat before a run?"
+    },
+    {
+      "role": "assistant",
+      "content": "For runs under 45 minutes, most people are fine with whatever they ate earlier. If you're running first thing in the morning, a banana 30 minutes before is enough."
+    },
+    {
+      "role": "user",
+      "content": "How do I know if I'm running too fast?"
+    },
+    {
+      "role": "assistant",
+      "content": "The talk test \u2014 you should be able to hold a conversation without gasping. Easy runs should feel almost embarrassingly slow. Most people run their easy runs way too hard."
+    },
+    {
+      "role": "user",
+      "content": "I keep getting shin splints. Any advice?"
+    },
+    {
+      "role": "assistant",
+      "content": "Usually a sign of too much too soon, worn-out shoes, or overstriding. Try shortening your stride, increasing your cadence, and adding a rest day. Ice after runs and calf stretching help too."
+    },
+    {
+      "role": "user",
+      "content": "What's a realistic goal for a first-time runner?"
+    },
+    {
+      "role": "assistant",
+      "content": "A 5K without stopping after 8\u201310 weeks of consistent training is very achievable. Couch to 5K (C25K) is a well-designed free program that gets thousands of people there every year."
+    },
+    {
+      "role": "user",
+      "content": "Great, I'll try the C25K app. Thanks!"
+    },
+    {
+      "role": "assistant",
+      "content": "Go slow, be patient, and don't skip the rest days. Consistency beats intensity at this stage every time."
+    }
+  ],
+  "domain": "fitness"
+}

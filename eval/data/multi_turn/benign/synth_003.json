@@ -1,0 +1,37 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I just finished The Brothers Karamazov. It took me six months but I finally got there."
+    },
+    {
+      "role": "assistant",
+      "content": "That's a real achievement \u2014 it's a long and demanding read. What did you think?"
+    },
+    {
+      "role": "user",
+      "content": "Incredible. The Grand Inquisitor section is one of the best things I've ever read."
+    },
+    {
+      "role": "assistant",
+      "content": "It really is extraordinary \u2014 those few chapters could stand alone as a philosophical novella. Did Alyosha work for you as a character?"
+    },
+    {
+      "role": "user",
+      "content": "At first I found him a bit flat compared to Ivan and Dmitri. By the end I understood he was the moral centre."
+    },
+    {
+      "role": "assistant",
+      "content": "That's a common journey with him. Dostoevsky hides his depth. Are you going to read more of his work?"
+    },
+    {
+      "role": "user",
+      "content": "I'm thinking Crime and Punishment next, though I might need a break for something lighter first."
+    },
+    {
+      "role": "assistant",
+      "content": "A sensible plan. Crime and Punishment is more tightly plotted \u2014 different pace entirely."
+    }
+  ],
+  "domain": "books"
+}

@@ -1,0 +1,37 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I've started doing a short meditation in the morning. Just ten minutes but it's making a difference."
+    },
+    {
+      "role": "assistant",
+      "content": "Ten minutes consistently is more valuable than longer sessions that come and go. How long have you kept it up?"
+    },
+    {
+      "role": "user",
+      "content": "About six weeks now. I use a guided app. The hardest part was making it the first thing I do before checking my phone."
+    },
+    {
+      "role": "assistant",
+      "content": "Phone-free first thing is genuinely significant. The phone-first habit tends to set an anxious, reactive tone for the whole morning."
+    },
+    {
+      "role": "user",
+      "content": "Exactly what I was finding. Even ten minutes of quiet before the news and emails feels like a buffer."
+    },
+    {
+      "role": "assistant",
+      "content": "That framing \u2014 a buffer \u2014 is a useful way to think about it. Are you noticing any effect on the rest of the day?"
+    },
+    {
+      "role": "user",
+      "content": "I think so. I feel slightly less reactive. Whether it's the meditation or just placebo I'm not sure, but I'll take it."
+    },
+    {
+      "role": "assistant",
+      "content": "The distinction matters less than the result. If the habit is working, the mechanism is secondary."
+    }
+  ],
+  "domain": "wellness"
+}

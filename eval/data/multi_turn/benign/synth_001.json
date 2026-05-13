@@ -1,0 +1,37 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I'm planning a trip to Japan in the spring. Cherry blossom season. I'm so excited."
+    },
+    {
+      "role": "assistant",
+      "content": "Japan during cherry blossom season is spectacular. Which cities are you thinking of visiting?"
+    },
+    {
+      "role": "user",
+      "content": "Tokyo definitely, and Kyoto. Maybe Osaka too if the timing works."
+    },
+    {
+      "role": "assistant",
+      "content": "That's a classic route. Are you planning to use the Shinkansen between cities?"
+    },
+    {
+      "role": "user",
+      "content": "Yes, I got a JR Pass. It works out much cheaper than individual tickets."
+    },
+    {
+      "role": "assistant",
+      "content": "Good call. Kyoto in early April is magical. Have you thought about which temples you want to prioritise?"
+    },
+    {
+      "role": "user",
+      "content": "Fushimi Inari is top of my list. I want to do the early morning walk before the crowds arrive."
+    },
+    {
+      "role": "assistant",
+      "content": "Starting before 7am makes a huge difference. The light through the torii gates at dawn is something else."
+    }
+  ],
+  "domain": "travel_planning"
+}

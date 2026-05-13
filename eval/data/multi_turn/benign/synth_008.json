@@ -1,0 +1,37 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "We're about to start a kitchen renovation. Six weeks of disruption but I'm excited about the result."
+    },
+    {
+      "role": "assistant",
+      "content": "Kitchen renovations are transformative. What's the main change you're making?"
+    },
+    {
+      "role": "user",
+      "content": "Opening up the wall between the kitchen and dining room to make one big space. And completely replacing the units."
+    },
+    {
+      "role": "assistant",
+      "content": "That kind of structural change makes a huge difference to how a home feels. Is the wall load-bearing?"
+    },
+    {
+      "role": "user",
+      "content": "Yes, we're putting in an RSJ. The structural engineer signed off on it last week."
+    },
+    {
+      "role": "assistant",
+      "content": "Good that you have that sorted before work starts. What's the unit style going for \u2014 modern, shaker?"
+    },
+    {
+      "role": "user",
+      "content": "Shaker in a dark green. I was nervous about the colour but everything I've seen online looks amazing."
+    },
+    {
+      "role": "assistant",
+      "content": "Dark green is having a real moment and it works beautifully with natural wood worktops if you're going that route."
+    }
+  ],
+  "domain": "home_renovation"
+}

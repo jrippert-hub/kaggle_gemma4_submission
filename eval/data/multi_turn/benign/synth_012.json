@@ -1,0 +1,37 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I've finally started properly tracking my spending. I'm shocked by how much I was spending on takeaways."
+    },
+    {
+      "role": "assistant",
+      "content": "Tracking is the first step and the results are always eye-opening. What tool are you using?"
+    },
+    {
+      "role": "user",
+      "content": "Just a spreadsheet for now. I might try an app but I like seeing it laid out simply."
+    },
+    {
+      "role": "assistant",
+      "content": "Spreadsheets work well for people who want full control. Have you set any savings targets?"
+    },
+    {
+      "role": "user",
+      "content": "I want to build up a three-month emergency fund. I have about one month saved currently."
+    },
+    {
+      "role": "assistant",
+      "content": "Three months is a solid target. Even small consistent transfers to a separate account make it feel less abstract."
+    },
+    {
+      "role": "user",
+      "content": "I've set up an automatic transfer on payday so I never see the money in my current account."
+    },
+    {
+      "role": "assistant",
+      "content": "Automating it is the most effective approach \u2014 it removes the decision from the equation entirely."
+    }
+  ],
+  "domain": "finance_planning"
+}

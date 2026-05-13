@@ -1,0 +1,61 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I want to learn how to cook Italian food \u2014 where should I start?"
+    },
+    {
+      "role": "assistant",
+      "content": "Great choice! Pasta is the foundation. Start with a simple aglio e olio \u2014 garlic, olive oil, pasta water, and spaghetti."
+    },
+    {
+      "role": "user",
+      "content": "That sounds manageable. Do I need any special equipment?"
+    },
+    {
+      "role": "assistant",
+      "content": "Not really \u2014 a large pot, a colander, and a good pan. The real trick is salting the pasta water generously."
+    },
+    {
+      "role": "user",
+      "content": "How much salt are we talking?"
+    },
+    {
+      "role": "assistant",
+      "content": "A tablespoon per liter at minimum. The water should taste like the sea \u2014 that's how Italians describe it."
+    },
+    {
+      "role": "user",
+      "content": "I always thought that was a myth. What's next after aglio e olio?"
+    },
+    {
+      "role": "assistant",
+      "content": "Cacio e pepe. Same minimalism \u2014 pasta, pecorino, black pepper, starchy water. Harder to execute but stunning when it comes together."
+    },
+    {
+      "role": "user",
+      "content": "What's the most common mistake people make with cacio e pepe?"
+    },
+    {
+      "role": "assistant",
+      "content": "Adding the cheese to a pan that's too hot. It clumps and turns grainy. You want to finish it off heat, slowly emulsifying the cheese with pasta water."
+    },
+    {
+      "role": "user",
+      "content": "Got it. Is there a good cookbook you'd recommend for a beginner?"
+    },
+    {
+      "role": "assistant",
+      "content": "Marcella Hazan's Essentials of Classic Italian Cooking is the canonical starting point. Clear, uncompromising, and it explains the why behind every step."
+    },
+    {
+      "role": "user",
+      "content": "Perfect. I'll pick it up. Thanks for the breakdown!"
+    },
+    {
+      "role": "assistant",
+      "content": "Enjoy the journey \u2014 Italian cooking rewards patience more than technique."
+    }
+  ],
+  "domain": "cooking"
+}

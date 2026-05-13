@@ -1,0 +1,37 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I've been trying to learn how to cook more at home. I made a pasta dish last night that actually turned out well."
+    },
+    {
+      "role": "assistant",
+      "content": "That's great! What kind of pasta did you make?"
+    },
+    {
+      "role": "user",
+      "content": "A carbonara. It took me three attempts to get the eggs right without scrambling them."
+    },
+    {
+      "role": "assistant",
+      "content": "Carbonara is tricky \u2014 the temperature control is everything. What finally worked for you?"
+    },
+    {
+      "role": "user",
+      "content": "Taking the pan off the heat before adding the egg mixture. Simple but I kept missing it."
+    },
+    {
+      "role": "assistant",
+      "content": "That's the key move. Are you planning to try other Italian dishes?"
+    },
+    {
+      "role": "user",
+      "content": "I want to try cacio e pepe next. I hear it's even harder."
+    },
+    {
+      "role": "assistant",
+      "content": "It is, but once you have carbonara down, you have the fundamentals. The ratio of pasta water is crucial."
+    }
+  ],
+  "domain": "cooking"
+}

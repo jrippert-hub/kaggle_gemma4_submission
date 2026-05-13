@@ -1,0 +1,69 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I want to learn Spanish. I tried Duolingo before but it didn't stick. Any suggestions?"
+    },
+    {
+      "role": "assistant",
+      "content": "Duolingo is great for gamification but weak on actual conversation skills. The gap for most people is moving from recognition to production \u2014 actively speaking and constructing sentences, not just choosing from multiple choice."
+    },
+    {
+      "role": "user",
+      "content": "What would you recommend instead?"
+    },
+    {
+      "role": "assistant",
+      "content": "A combination: Anki for vocabulary (spaced repetition retains words far better), a grammar resource like Language Transfer for Spanish (free podcast-style, surprisingly effective), and iTalki for conversation with a tutor."
+    },
+    {
+      "role": "user",
+      "content": "How much time per day do I need to make real progress?"
+    },
+    {
+      "role": "assistant",
+      "content": "Consistency matters more than volume. 30 focused minutes daily will outperform three hours on Saturday. The spaced repetition only works if the spacing is maintained."
+    },
+    {
+      "role": "user",
+      "content": "How long until I can hold a basic conversation?"
+    },
+    {
+      "role": "assistant",
+      "content": "With consistent daily practice, most people can manage simple present-tense conversations in 3\u20134 months. Spanish is one of the more accessible languages for English speakers \u2014 the phonetics are regular and the grammar has familiar structure."
+    },
+    {
+      "role": "user",
+      "content": "Should I try to find a language exchange partner?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, once you have enough vocabulary to sustain a few minutes of conversation. Apps like Tandem or HelloTalk connect you with native Spanish speakers learning English. You each spend half the time in your target language."
+    },
+    {
+      "role": "user",
+      "content": "What's the best way to build vocabulary quickly?"
+    },
+    {
+      "role": "assistant",
+      "content": "Learn the 1,000 most common Spanish words first \u2014 they cover roughly 85% of everyday speech. Then use them in context immediately. Words learned in sentences stick better than isolated vocabulary lists."
+    },
+    {
+      "role": "user",
+      "content": "I've heard immersion is important. Can I do that without going to a Spanish-speaking country?"
+    },
+    {
+      "role": "assistant",
+      "content": "Absolutely. Change your phone to Spanish, watch Spanish TV with Spanish subtitles (not English \u2014 you'll just read English), listen to Spanish podcasts at a level slightly above your comfort zone. Comprehensible input, consistently."
+    },
+    {
+      "role": "user",
+      "content": "What shows are good for learning Spanish?"
+    },
+    {
+      "role": "assistant",
+      "content": "Money Heist (La Casa de Papel) is popular and compelling. Extra en Espa\u00f1ol is made specifically for learners. Once you're intermediate, any Spanish-language soap opera works \u2014 they're slow, clear, and emotionally obvious, which helps comprehension."
+    }
+  ],
+  "domain": "learning_language"
+}

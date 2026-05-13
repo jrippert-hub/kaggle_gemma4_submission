@@ -1,0 +1,37 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I've been at my current job for four years and I'm starting to feel ready for a new challenge."
+    },
+    {
+      "role": "assistant",
+      "content": "Four years is a good run \u2014 long enough to have built something, enough time to feel the itch. What's drawing you toward a change?"
+    },
+    {
+      "role": "user",
+      "content": "I've learned everything I can here. The projects have become repetitive and I'm not growing anymore."
+    },
+    {
+      "role": "assistant",
+      "content": "Stagnation is a real career risk. Are you thinking about moving within the same industry or something different?"
+    },
+    {
+      "role": "user",
+      "content": "Probably the same field but a larger company where I can specialise more. My current role is very generalist."
+    },
+    {
+      "role": "assistant",
+      "content": "Specialisation makes sense at this stage. Have you started updating your portfolio?"
+    },
+    {
+      "role": "user",
+      "content": "I've been doing that. Also trying to be more active on LinkedIn which does not come naturally to me."
+    },
+    {
+      "role": "assistant",
+      "content": "It doesn't for most people. Consistent engagement beats sporadic posts \u2014 even just commenting thoughtfully on others' work helps."
+    }
+  ],
+  "domain": "career_development"
+}

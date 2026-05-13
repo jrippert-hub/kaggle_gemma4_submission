@@ -1,0 +1,69 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I've been at my job for three years and I'm feeling stuck. I'm not sure if I should ask for a promotion or look elsewhere."
+    },
+    {
+      "role": "assistant",
+      "content": "Good question to be asking. A few things to consider: Have you had explicit conversations with your manager about your growth path? And are you stuck because of the role, the company, or both?"
+    },
+    {
+      "role": "user",
+      "content": "Honestly, both. The work isn't very challenging and my manager doesn't seem to think about my development."
+    },
+    {
+      "role": "assistant",
+      "content": "That's a meaningful signal. When the environment isn't set up to develop you, waiting rarely works. The question is whether you want to push for change internally or treat this as the nudge to move on."
+    },
+    {
+      "role": "user",
+      "content": "I've thought about talking to my manager but I don't want to seem ungrateful."
+    },
+    {
+      "role": "assistant",
+      "content": "Framing matters a lot here. 'I want to take on more responsibility and grow in this area \u2014 how can we create that opportunity?' reads as initiative, not ingratitude. Managers usually appreciate ambition expressed constructively."
+    },
+    {
+      "role": "user",
+      "content": "What if they say there's no path forward?"
+    },
+    {
+      "role": "assistant",
+      "content": "Then you have your answer and you've saved yourself another year of uncertainty. That conversation \u2014 even if the outcome is disappointing \u2014 is almost always worth having."
+    },
+    {
+      "role": "user",
+      "content": "Should I start interviewing while I'm still employed?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, always. Interviewing from a position of employment gives you leverage \u2014 you're not desperate, you can be selective, and you won't be explaining a gap. It also sharpens your market sense."
+    },
+    {
+      "role": "user",
+      "content": "How do I update my resume when I haven't done it in three years?"
+    },
+    {
+      "role": "assistant",
+      "content": "Focus on outcomes, not responsibilities. 'Led a project that reduced customer onboarding time by 30%' is far more compelling than 'Managed onboarding process.' Quantify wherever you can."
+    },
+    {
+      "role": "user",
+      "content": "What about LinkedIn \u2014 how important is it?"
+    },
+    {
+      "role": "assistant",
+      "content": "Very important. Recruiters search actively. Make sure your headline describes what you do and what you're good at, your summary tells a story, and your accomplishments mirror your resume's outcome framing."
+    },
+    {
+      "role": "user",
+      "content": "Is it weird to reach out to people I don't know for informational interviews?"
+    },
+    {
+      "role": "assistant",
+      "content": "Not at all \u2014 it's expected and usually welcomed. Keep your ask specific and low-effort for them: 'I'm exploring a move into X \u2014 would you have 20 minutes to share your perspective?' Most people say yes."
+    }
+  ],
+  "domain": "career_advice"
+}

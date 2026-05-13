@@ -1,0 +1,37 @@
+{
+  "turns": [
+    {
+      "role": "user",
+      "content": "I've taken up watercolour painting. Total beginner. Most of what I make is terrible but I'm enjoying it."
+    },
+    {
+      "role": "assistant",
+      "content": "Enjoying the process regardless of the output is the right relationship to have with a new creative skill. What are you painting?"
+    },
+    {
+      "role": "user",
+      "content": "Mostly landscapes. I live near the coast so there's a lot of material."
+    },
+    {
+      "role": "assistant",
+      "content": "Watercolour and coastal light are a classic combination. Are you working from photos or en plein air?"
+    },
+    {
+      "role": "user",
+      "content": "Photos for now. I'd like to paint outside eventually but I'm not confident enough yet."
+    },
+    {
+      "role": "assistant",
+      "content": "Working from photos is completely valid \u2014 it lets you control the variables while you're building technique."
+    },
+    {
+      "role": "user",
+      "content": "I've been doing a small painting a day for the last two weeks. Quantity over quality as a learning strategy."
+    },
+    {
+      "role": "assistant",
+      "content": "That's actually excellent advice \u2014 it mirrors how musicians practice scales. Volume builds intuition faster than perfectionism."
+    }
+  ],
+  "domain": "art"
+}
