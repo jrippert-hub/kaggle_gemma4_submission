@@ -16,7 +16,7 @@ from database import (
 
 logger = logging.getLogger(__name__)
 
-SYSTEM_PROMPT = """You are a safety analysis agent. Analyse the conversation below and output ONLY a JSON object with exactly these fields. No prose, no markdown, no code fences — raw JSON only.
+SYSTEM_PROMPT = """You are a safety analysis agent. Analyse the conversation below and output ONLY a JSON object with exactly these fields. No prose, no markdown, no code fences, no disclaimer, no preamble — raw JSON only. Start your response with { and end with }.
 
 OUTPUT FORMAT (copy these exact field names):
 {
@@ -98,17 +98,47 @@ def _build_prompt(
 
 
 def _parse_response(raw: str) -> Optional[dict]:
+    """Extract and parse the first valid JSON object from raw model output.
+    Uses brace-matching so disclaimers or preamble before the { are ignored."""
     cleaned = re.sub(r"```(?:json)?\s*|\s*```", "", raw).strip()
+
+    # Fast path: entire output is valid JSON
     try:
         return json.loads(cleaned)
     except json.JSONDecodeError:
         pass
-    match = re.search(r"\{.*\}", cleaned, re.DOTALL)
-    if match:
-        try:
-            return json.loads(match.group())
-        except json.JSONDecodeError:
-            pass
+
+    # Brace-match: find the first { and walk to its matching }
+    start = cleaned.find("{")
+    if start == -1:
+        return None
+
+    depth = 0
+    in_string = False
+    escape_next = False
+
+    for i, ch in enumerate(cleaned[start:], start):
+        if escape_next:
+            escape_next = False
+            continue
+        if ch == "\\" and in_string:
+            escape_next = True
+            continue
+        if ch == '"':
+            in_string = not in_string
+            continue
+        if in_string:
+            continue
+        if ch == "{":
+            depth += 1
+        elif ch == "}":
+            depth -= 1
+            if depth == 0:
+                try:
+                    return json.loads(cleaned[start : i + 1])
+                except json.JSONDecodeError:
+                    break
+
     return None
 
 
