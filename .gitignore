@@ -1,0 +1,13 @@
+sessions.db
+logs/
+__pycache__/
+eval/__pycache__/
+.claude/
+# Intermediate result files — keep only the four canonical offline runs
+eval/results/20260510_*.json
+eval/results/20260511_*.json
+eval/results/20260512_*.json
+eval/results/20260513_0*.json
+eval/results/20260513_2[0-1]*.json
+eval/results/20260513_22[0-2]*.json
+eval/results/20260513_230*.json

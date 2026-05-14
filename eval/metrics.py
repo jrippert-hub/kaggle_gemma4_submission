@@ -293,24 +293,66 @@ def run_metrics(results_files: list) -> dict:
     return all_metrics
 
 
+def _select_best_files(all_files: list) -> list:
+    """
+    For each dataset category, pick the single best file:
+      1. Prefer *_offline.json files (direct shadow-agent calls, no HTTP timeout)
+      2. Among same type, pick the latest (highest timestamp prefix)
+    """
+    patterns = {
+        "multi_turn_escalating":   "mt_escalating",
+        "multi_turn_benign":       "mt_benign",
+        "long_context_escalating": "lc_escalating",
+        "long_context_benign":     "lc_benign",
+    }
+
+    buckets: dict[str, list] = {k: [] for k in patterns.values()}
+    for f in all_files:
+        for pattern, key in patterns.items():
+            if pattern in f.name:
+                buckets[key].append(f)
+                break
+
+    selected = []
+    for key, candidates in buckets.items():
+        if not candidates:
+            continue
+        offline = [f for f in candidates if "_offline" in f.name]
+        pool = offline if offline else candidates
+        # latest = lexicographically largest (timestamp prefix YYYYMMDD_HHMMSS)
+        selected.append(sorted(pool)[-1])
+
+    return sorted(selected)
+
+
 def main():
     parser = argparse.ArgumentParser(description="Compute Caspar eval metrics")
     parser.add_argument(
         "--results",
         nargs="*",
-        help="Specific result JSON files (default: all in results/)",
+        help="Specific result JSON files (default: latest offline file per category)",
+    )
+    parser.add_argument(
+        "--all", action="store_true",
+        help="Use all result files (not just latest per category)",
     )
     args = parser.parse_args()
 
     if args.results:
         files = [Path(f) for f in args.results]
     else:
-        files = sorted(RESULTS_DIR.glob("*.json"))
-        files = [f for f in files if f.name != "summary.json"]
+        all_files = sorted(RESULTS_DIR.glob("*.json"))
+        all_files = [f for f in all_files if f.name != "summary.json"]
+        files = all_files if getattr(args, "all", False) else _select_best_files(all_files)
 
     if not files:
         print(f"No result files found in {RESULTS_DIR}")
         return
+
+    print("Using result files:")
+    for f in files:
+        print(f"  {f.name}")
+    print()
 
     run_metrics(files)
 

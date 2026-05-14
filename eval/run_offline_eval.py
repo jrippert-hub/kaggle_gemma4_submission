@@ -37,7 +37,7 @@ RESULTS_DIR     = Path(__file__).parent / "results"
 
 
 # ---------------------------------------------------------------------------
-# Offline Caspar eval
+# Offline Caspar eval — multi-turn
 # ---------------------------------------------------------------------------
 
 async def eval_caspar_offline(conversation: dict) -> dict:
@@ -79,7 +79,72 @@ async def eval_caspar_offline(conversation: dict) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# Baseline eval
+# Offline Caspar eval — long-context
+# ---------------------------------------------------------------------------
+
+_LC_CHUNK_WORDS = 300   # words per "turn" when segmenting LC documents
+# Shadow agent reads all_turns[-20:] = 10 user-turns.  We cap saved chunks at
+# this limit so the prompt stays inside Gemma's reliable instruction-following
+# range (~3 000 words).  For documents where safe_fraction ≥ 0.5 the crisis
+# content falls in the second half, which is exactly what these last chunks cover.
+_LC_MAX_CHUNKS   = 6    # 6 × 300 words ≈ 1 800 words — inside Gemma's reliable range
+
+
+async def eval_caspar_lc_offline(document: dict) -> dict:
+    """
+    Split long-context document into ~300-word chunks and store only the
+    *last* _LC_MAX_CHUNKS as sequential user turns, then run the shadow agent.
+
+    Rationale: the shadow agent reads all_turns[-20:] (= 10 user-turns at most).
+    Saving the tail of the document keeps each chunk within Gemma's reliable
+    instruction-following range while ensuring the crisis portion (safe_fraction=0.5
+    → words 2 900–5 800) is always present in the prompt.  The TruncatingClassifier
+    baseline reads only the *first* 512 tokens, so the contrast remains valid.
+    """
+    session_id = str(uuid.uuid4())
+    text = document.get("text", "")
+    total_tokens = count_tokens(text)
+    word_count = len(text.split())
+
+    # Split into word chunks, keep only the tail
+    words = text.split()
+    all_chunks = [
+        " ".join(words[i: i + _LC_CHUNK_WORDS])
+        for i in range(0, len(words), _LC_CHUNK_WORDS)
+    ]
+    chunks = all_chunks[-_LC_MAX_CHUNKS:]   # last 10 chunks ≈ last 3 000 words
+
+    # Save each chunk as a user turn (assistant turn = brief acknowledgement)
+    for turn_idx, chunk in enumerate(chunks):
+        await save_turn(session_id, turn_idx * 2 + 1, "user", chunk)
+        await save_turn(session_id, turn_idx * 2 + 2, "assistant", "understood")
+
+    # Run shadow agent — prompt covers the second half of the document
+    await run_shadow_agent(session_id, OLLAMA_BASE_URL, OLLAMA_MODEL)
+
+    # Read result
+    state = await get_safety_state(session_id)
+    score = float(state.get("risk_score") or 0.0)
+    flagged = score > RISK_THRESHOLD
+
+    return {
+        "session_id": session_id,
+        "first_flag_turn": 1 if flagged else None,
+        "final_risk_score": score,
+        "final_trajectory": state.get("trajectory", "stable"),
+        "activations": len(state.get("activation_history", [])),
+        "risk_scores": [{"turn": 1, "score": score}],
+        "total_context_tokens": total_tokens,
+        "word_count": word_count,
+        "baseline_sees_tokens": 512,
+        "context_ratio": round(total_tokens / 512, 1),
+        "arc_summary": state.get("arc_summary", ""),
+        "observed_themes": state.get("observed_themes", []),
+    }
+
+
+# ---------------------------------------------------------------------------
+# Baseline eval — multi-turn
 # ---------------------------------------------------------------------------
 
 def eval_baselines(conversation: dict) -> dict:
@@ -123,6 +188,41 @@ def eval_baselines(conversation: dict) -> dict:
 
 
 # ---------------------------------------------------------------------------
+# Baseline eval — long-context
+# ---------------------------------------------------------------------------
+
+def eval_baselines_lc(document: dict) -> dict:
+    text = document.get("text", "")
+    total_tokens = count_tokens(text)
+    word_count = len(text.split())
+    pp = PerPromptClassifier()
+    tr = TruncatingClassifier()
+
+    pp_score = pp.score_document(text)
+    tr_score = tr.score_document(text)
+    pp_flagged = pp.flag_document(text)
+    tr_flagged = tr.flag_document(text)
+
+    base = {
+        "total_context_tokens": total_tokens,
+        "word_count": word_count,
+        "baseline_sees_tokens": 512,
+        "context_ratio": round(total_tokens / 512, 1),
+    }
+
+    return {
+        "per_prompt": {**base,
+                       "first_flag_turn": 1 if pp_flagged else None,
+                       "final_risk_score": pp_score,
+                       "risk_scores": [{"turn": 1, "score": pp_score}]},
+        "truncating": {**base,
+                       "first_flag_turn": 1 if tr_flagged else None,
+                       "final_risk_score": tr_score,
+                       "risk_scores": [{"turn": 1, "score": tr_score}]},
+    }
+
+
+# ---------------------------------------------------------------------------
 # Runner
 # ---------------------------------------------------------------------------
 
@@ -137,7 +237,10 @@ async def run(dataset_dir: Path, max_n: int = None):
         print(f"No JSON files in {dataset_dir}")
         return
 
-    print(f"\n── Offline eval: {len(files)} files from {dataset_dir.name} ──")
+    # Detect mode from directory path
+    is_lc = "long_context" in str(dataset_dir)
+    mode = "long-context" if is_lc else "multi-turn"
+    print(f"\n── Offline eval [{mode}]: {len(files)} files from {dataset_dir.name} ──")
 
     caspar_results = []
     pp_results = []
@@ -148,7 +251,11 @@ async def run(dataset_dir: Path, max_n: int = None):
         print(f"  [{i+1}/{len(files)}] {path.name} … ", end="", flush=True)
 
         # Caspar
-        result = await eval_caspar_offline(data)
+        if is_lc:
+            result = await eval_caspar_lc_offline(data)
+        else:
+            result = await eval_caspar_offline(data)
+
         result["source_file"] = path.name
         result["ground_truth"] = {
             k: data.get(k)
@@ -159,7 +266,10 @@ async def run(dataset_dir: Path, max_n: int = None):
         caspar_results.append(result)
 
         # Baselines
-        bl = eval_baselines(data)
+        if is_lc:
+            bl = eval_baselines_lc(data)
+        else:
+            bl = eval_baselines(data)
         for r in [bl["per_prompt"], bl["truncating"]]:
             r["source_file"] = path.name
             r["ground_truth"] = result["ground_truth"]
