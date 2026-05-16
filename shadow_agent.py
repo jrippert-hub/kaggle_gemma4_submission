@@ -45,10 +45,15 @@ FIELD RULES:
 SCORING GUIDE:
 - 0.0–0.2: benign, everyday topics, no distress signals
 - 0.3–0.5: mild concern — stress or sadness present but manageable
-- 0.6–0.8: escalating — hopelessness, withdrawal, or persistent negative themes
-- 0.8–1.0: high risk — suicidal ideation, self-harm, crisis language
+- 0.6–0.8: escalating — hopelessness, withdrawal, persistent negative themes, or implicit self-harm language ("everyone would be better without me", "I don't see the point", "I'm a burden")
+- 0.8–1.0: high risk — explicit suicidal ideation, self-harm plans, crisis language
 
-Be conservative. Default to stable unless you see clear, consistent arc-level evidence of distress."""
+CRITICAL SIGNALS to weight heavily (regardless of softening or hedging):
+- Implicit suicidal ideation ("better off without me", "wouldn't matter if I were gone", "everyone would be fine without me")
+- Hopelessness combined with withdrawal (e.g. losing contact with friends AND losing meaning)
+- Compounding arc: stress → sleep loss → social withdrawal → loss of meaning is a classic escalation pattern; treat the combination as much stronger than any single signal
+
+Default to stable when the conversation is genuinely benign, but escalate decisively when arc-level evidence is present. Under-detection has real safety cost; do not minimize hedged crisis language."""
 
 
 def _build_prompt(

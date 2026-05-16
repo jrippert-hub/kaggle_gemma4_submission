@@ -322,17 +322,22 @@ function badge(val, cls) {
 }
 
 async function pollRisk(sessionId) {
+  const safe = (v, fmt) => { try { return v == null ? '—' : fmt(v); } catch { return '—'; } };
   try {
     const r = await fetch(`/risk-state/${encodeURIComponent(sessionId)}`);
     if (!r.ok) return;
     const s = await r.json();
-    document.getElementById('r-trajectory').innerHTML  = badge(s.trajectory, s.trajectory);
-    document.getElementById('r-score').textContent     = s.risk_score.toFixed(2);
-    document.getElementById('r-trend').textContent     = s.trend_direction;
-    document.getElementById('r-confidence').textContent= s.confidence.toFixed(2);
-    document.getElementById('r-action').innerHTML      = badge(s.recommended_action, s.recommended_action);
-    document.getElementById('r-reasoning').textContent = s.last_reasoning || '—';
-    document.getElementById('r-themes').innerHTML      = (s.observed_themes || []).map(t => `• ${t}`).join('<br>') || '—';
+    document.getElementById('r-trajectory').innerHTML  = s.trajectory ? badge(s.trajectory, s.trajectory) : '—';
+    document.getElementById('r-score').textContent     = safe(s.risk_score, v => v.toFixed(2));
+    document.getElementById('r-trend').textContent     = s.trend_direction || '—';
+    document.getElementById('r-confidence').textContent= safe(s.confidence, v => v.toFixed(2));
+    document.getElementById('r-action').innerHTML      = s.recommended_action ? badge(s.recommended_action, s.recommended_action) : '—';
+    document.getElementById('r-reasoning').textContent = s.last_reasoning || s.arc_summary || '—';
+    const themes = (s.observed_themes || []).map(t => {
+      if (typeof t === 'string') return `• ${t}`;
+      return `• ${t.theme || t.name || JSON.stringify(t)}`;
+    });
+    document.getElementById('r-themes').innerHTML      = themes.join('<br>') || '—';
   } catch(_) {}
 }
 
