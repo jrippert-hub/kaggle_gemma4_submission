@@ -28,7 +28,7 @@ _TEST_MODE = os.getenv("TEST_MODE", "false").lower() == "true"
 
 COMPOSITE_THRESHOLD = 0.05 if _TEST_MODE else 0.4
 VALENCE_DRIFT_THRESHOLD = 0.05 if _TEST_MODE else 0.3
-INTERVAL_TURNS = 3 if _TEST_MODE else 15
+INTERVAL_TURNS = 2 if _TEST_MODE else 15   # in TEST_MODE the shadow agent fires every 2 user turns
 
 
 def load_sentiment_model() -> None:
