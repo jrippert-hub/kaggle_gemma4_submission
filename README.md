@@ -27,7 +27,11 @@ pip install -r requirements.txt
 ollama serve
 
 # 4. Start Caspar
+# Option A — demo mode (shadow agent fires every few turns, ideal for testing)
 TEST_MODE=true uvicorn main:app --reload
+
+# Option B — production-like mode (shadow agent fires every ~10 turns)
+uvicorn main:app --reload
 ```
 
 Then open **http://localhost:8000** in your browser.
