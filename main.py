@@ -31,8 +31,11 @@ _EVAL_MODE = os.getenv("EVAL_MODE", "false").lower() == "true"
 # Config
 # ---------------------------------------------------------------------------
 
-OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
-OLLAMA_CHAT_MODEL = os.getenv("OLLAMA_CHAT_MODEL", "gemma4:e4b")
+OLLAMA_BASE_URL    = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+OLLAMA_CHAT_MODEL  = os.getenv("OLLAMA_CHAT_MODEL", "gemma4:e4b")
+# Shadow agent can use a different (typically larger) model than the main chat.
+# Falls back to OLLAMA_CHAT_MODEL if unset, so existing setups keep working.
+OLLAMA_SHADOW_MODEL = os.getenv("OLLAMA_SHADOW_MODEL", OLLAMA_CHAT_MODEL)
 
 BASE_SYSTEM_PROMPT = "You are a helpful, thoughtful assistant."
 TONE_SHIFT_ADDENDUM = (
@@ -72,7 +75,7 @@ async def _shadow_worker() -> None:
     while True:
         session_id = await _shadow_queue.get()
         try:
-            await run_shadow_agent(session_id, OLLAMA_BASE_URL, OLLAMA_CHAT_MODEL)
+            await run_shadow_agent(session_id, OLLAMA_BASE_URL, OLLAMA_SHADOW_MODEL)
         except Exception:
             logger.exception("[shadow_worker] unhandled error — session=%s", session_id)
         finally:
@@ -229,7 +232,7 @@ async def force_evaluate(session_id: str) -> dict:
     Used by the eval harness for long-context documents where a single
     message would not normally cross the trigger threshold.
     """
-    await run_shadow_agent(session_id, OLLAMA_BASE_URL, OLLAMA_CHAT_MODEL)
+    await run_shadow_agent(session_id, OLLAMA_BASE_URL, OLLAMA_SHADOW_MODEL)
     return await get_safety_state(session_id)
 
 
