@@ -13,16 +13,20 @@ Caspar is a persistent shadow agent that wraps any conversational AI to detect g
 - [Ollama](https://ollama.com) installed and running locally
 - `gemma4:e4b` model pulled: `ollama pull gemma4:e4b`
 
-### Run it (3 commands)
+### Run it
 
 ```bash
-# 1. Install dependencies
+# 1. Clone the repo
+git clone https://github.com/jrippert-hub/kaggle_gemma4_submission.git
+cd kaggle_gemma4_submission
+
+# 2. Install dependencies
 pip install -r requirements.txt
 
-# 2. Make sure Ollama is running
-ollama serve   # in a separate terminal if not already running
+# 3. Make sure Ollama is running (in a separate terminal if not already)
+ollama serve
 
-# 3. Start Caspar
+# 4. Start Caspar
 TEST_MODE=true uvicorn main:app --reload
 ```
 
@@ -121,13 +125,3 @@ python3 eval/metrics.py   # prints the summary table
 | `/admin/force-evaluate/{session_id}` | POST | Directly invoke shadow agent (used by eval harness) |
 | `/health` | GET | Model name, test mode status |
 
----
-
-## Limitations
-
-- **Single-domain bias** — Evaluation skews toward mental health counseling; production use needs coverage across domestic situations, addiction, financial crisis, and other escalation patterns.
-- **Heuristic ground truth** — Inflection turns are assigned heuristically, not by clinical annotators; production thresholds would require expert-labeled data.
-- **Latency** — The shadow agent adds ~15s of background processing per trigger on CPU Ollama; GPU inference or a smaller distilled model brings this under 2s.
-- **Safety policy alignment** — Risk scoring and recommended actions are currently heuristic; production use requires alignment with platform-specific moderation policies.
-- **Privacy** — Conversations are stored in a local SQLite database; production use requires PII handling, retention limits, and encryption at rest.
-- **Session integrity** — Session state is keyed on a client-supplied ID; production use requires authenticated session binding to prevent spoofing.
